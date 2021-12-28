@@ -138,7 +138,7 @@ Bedrock documentation is available at [https://roots.io/docs/bedrock/master/inst
 
 <p>
   <a href="https://tailwindcss.com/#gh-light-mode-only" target="_blank">
-    <a href="https://getlogovector.com/tailwind-css-logo-vector-svg/" target="_blank"><img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" /></a>  
+    <img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" />
   </a>
 </p>
 
