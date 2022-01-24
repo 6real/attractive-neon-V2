@@ -2,10 +2,10 @@
   ul.page-numbers {
     @apply border-0 #{!important} ;
     li {
-      @apply mx-2 #{!important};
+      @apply mx-2 border-0 #{!important};
       span,
       a {
-        //@apply -ml-px relative inline-flex items-center px-6 py-4 border border-primary bg-primary hover:bg-primary-hover text-sm font-medium text-white #{!important} ;
+        @apply -ml-px relative inline-flex items-center px-6 py-2 bg-primary hover:bg-primary-hover text-lg text-white rounded-lg #{!important} ;
       }
     }
   }
