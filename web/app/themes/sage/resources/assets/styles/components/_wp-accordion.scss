@@ -1,0 +1,29 @@
+.wp-block-pb-accordion-item {
+  @include shadowCard;
+
+  background: $grey-dark;
+  padding: $spacer*2;
+  color: $white;
+  margin-bottom: $spacer*2;
+  height: 100%;
+
+  .c-accordion__title {
+    margin: 0;
+    font-weight: 400;
+
+    &::after {
+      color: $pink;
+      font-size: 50px;
+    }
+  }
+
+  a {
+    color: $pink;
+  }
+
+  &.is-open {
+    h3 {
+      margin-bottom: $spacer*2;
+    }
+  }
+}

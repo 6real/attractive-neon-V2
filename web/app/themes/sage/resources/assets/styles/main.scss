@@ -2,33 +2,98 @@
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
  */
-@tailwind base;
 
 /** Import variables */
 @import "common/variables";
 
-/** Import everything from autoload */
-@import "./autoload/**/*";
+//@import "tailwindcss/base";
+//@import "tailwindcss/components";
+//@import "tailwindcss/utilities";
 
-/**
- * This injects any component classes registered by Tailwind plugins.
- */
+
+
+@tailwind base;
 @tailwind components;
+@tailwind utilities;
+
+@import "common/fonts";
+@import "common/mediaqueries";
+@import "common/svg-encode";
+@import "common/container";
+
+//Alpine Cloaking
+[x-cloak] {
+  display: none !important;
+}
 
 /** Import theme styles */
+
+/** Commons theme styles */
+@import "common/global";
+@import "common/colors";
+@import "common/acf-editor";
+@import "common/puce";
+@import "common/shadows";
+@import "common/custom_loader";
+@import "common/links";
+
+/** Components theme styles */
 @import "components/buttons";
+@import "components/list";
+@import "components/toggleButton";
+@import "components/title";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/wp-block-image";
+@import "components/wc-block-product-categories";
+@import "components/wp-block-gallery";
+@import "components/column";
+@import "components/columns";
+@import "components/wc-pagination";
+@import "components/wc-block-grid__products";
+@import "components/media-text";
+@import "components/single-mailpoet_page";
+
+/** Layout theme styles */
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/post";
 @import "layouts/tinymce";
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
-@tailwind utilities;
+/** WooCommerce theme styles */
+@import "layouts/woocommerce/archive-product";
+@import "layouts/woocommerce/single-product";
+@import "layouts/woocommerce/woocommerce-cart";
+@import "layouts/woocommerce/woocommerce-checkout";
+@import "layouts/woocommerce/my-account";
+@import "layouts/woocommerce/navigation";
+@import "layouts/woocommerce/notice";
+@import "layouts/woocommerce/single-product/variations";
+@import "layouts/woocommerce/single-product/product-thumbnails";
+@import "layouts/woocommerce/single-product/woocommerce-tabs";
+@import "layouts/woocommerce/single-product/related-product";
+@import "layouts/woocommerce/single-product/tabs/shipping";
+@import "layouts/woocommerce/wc-account";
+
+/** Component theme styles */
+@import "components/topbar";
+@import "components/newsletter";
+@import "components/main-media-text";
+@import "components/media-reassurance";
+@import "components/card-product";
+@import "components/neonCustom";
+@import "components/loader";
+@import "components/products-skills";
+@import "components/banner-marketing";
+@import "components/wp-forms";
+@import "components/jdgm-carousel";
+@import "components/wp-accordion";
+@import "components/paypal-banner";
+@import "components/mailpoet_form-articles";
+
+
+

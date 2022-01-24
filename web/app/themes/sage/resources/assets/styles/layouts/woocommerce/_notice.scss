@@ -1,0 +1,28 @@
+.woocommerce-notices-wrapper {
+  @include Montserrat;
+
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+
+  .woocommerce-message {
+    border-color: $pink;
+
+    &::before {
+      color: $pink;
+    }
+
+    a {
+      color: $pink;
+      background: transparent;
+      font-weight: 400;
+      padding: 0;
+      margin-left: $spacer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.woocommerce-NoticeGroup {
+  @include Montserrat;
+}

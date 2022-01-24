@@ -1,0 +1,50 @@
+form[name="checkout"] {
+  margin-top: $spacer*8;
+
+  h3 {
+    font-weight: 500;
+    font-size: 26px;
+  }
+
+  .form-row {
+    margin-top: $spacer;
+
+    label {
+      font-weight: 400;
+    }
+
+    span {
+      input {
+        background-color: $white;
+        padding: $spacer/2 $spacer;
+        font-size: 16px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid $pink;
+      }
+    }
+  }
+
+  .place-order {
+    button[type="submit"] {
+      background-color: $pink;
+      padding: $spacer $spacer*2;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
+
+.woocommerce table.shop_table {
+  @include Poppins;
+  @include shadowCard;
+
+  background-color: $grey-light;
+  border-color: $pink;
+
+  dd > p {
+    margin: 0;
+    color: $pink;
+  }
+}

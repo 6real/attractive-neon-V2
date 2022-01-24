@@ -1,0 +1,27 @@
+// Don't touch
+$xxsmall: 0 !default;
+$xsmall: 320px !default;
+$small: 520px !default;
+$medium: 768px !default;
+$large: 1024px !default;
+$xlarge: 1920px !default;
+
+$breakpoints: (xxsmall: $xxsmall, xsmall: $xsmall, small: $small, medium: $medium, large: $large, xlarge: $xlarge) !default;
+
+@mixin breakpoint($size) {
+  $value: $size;
+
+  @if (type_of($size) == "string") {
+    $value: map-get($breakpoints, $size);
+  }
+
+  @if ($value > 0) {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}

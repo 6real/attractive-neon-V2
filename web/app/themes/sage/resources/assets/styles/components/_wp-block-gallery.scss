@@ -1,0 +1,25 @@
+.wp-block-gallery {
+  &.is-style-slider {
+    position: relative;
+
+    .blocks-gallery-grid {
+      flex-wrap: nowrap;
+      min-width: 100%;
+      width: auto;
+      overflow-x: scroll;
+      margin-right: -150px;
+      margin-left: -150px;
+      padding-left: 150px;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .blocks-gallery-item {
+        min-width: 264px;
+      }
+    }
+  }
+}

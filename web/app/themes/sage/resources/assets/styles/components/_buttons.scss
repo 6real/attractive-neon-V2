@@ -1,5 +1,17 @@
-.btn {
-  @apply bg-primary rounded my-3 px-4 py-3 text-white leading-none;
+.wp-block-buttons {
+  .wp-block-button {
+    &__link {
+      background: $pink;
+      font-size: 14px;
+      padding: 12px 25px;
+    }
+  }
 
-  transition: 0.2s ease;
+  .is-style-outline {
+    .wp-block-button__link {
+      border: 2px solid $pink;
+      background: $grey-dark;
+      color: $white;
+    }
+  }
 }

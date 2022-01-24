@@ -1,1 +1,25 @@
-// Global styles are set in the Tailwind config using a plugin
+body,
+html {
+  z-index: 1;
+  margin: 0;
+  background: $grey-bk;
+  overflow-x: hidden;
+}
+
+html[href] {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+span,
+a {
+  @include Montserrat;
+}
+
+p {
+  @include p;
+}
+
+$spacer: 1rem;

@@ -1,0 +1,24 @@
+.single-post {
+  .mailpoet_form.mailpoet_form_html {
+    max-width: 80%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+
+    input[type="email"] {
+      height: 30px;
+      width: 267px !important;
+      border: 2px solid $pink;
+    }
+
+    input[type="submit"] {
+      font-size: 16px;
+      min-width: 267px !important;
+    }
+
+    @include breakpoint(medium) {
+      max-width: 50%;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+/Users/cyrilsalvi/Local Sites/bedwind/app/bedrock/web/app/plugins/query-monitor/wp-content/db.php

@@ -1,0 +1,61 @@
+.woocommerce-product-gallery {
+  &__main {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    margin: 0 0 $spacer*2 0;
+
+    @include breakpoint(medium) {
+      margin-bottom: $spacer;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      margin: -7px -7px;
+      background-color: $pink;
+      background-image: linear-gradient(to right, $grey-dark, rgba(255, 255, 255, 0));
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba($pink, 0.6);
+      }
+    }
+  }
+
+  &__image {
+    min-width: 100px;
+    margin-right: $spacer/2;
+    margin-bottom: $spacer;
+
+    @include breakpoint(medium) {
+      max-width: 100px;
+    }
+
+    &--thumbs {
+      display: flex;
+      overflow-x: scroll;
+      padding-bottom: 0;
+
+      @include breakpoint(medium) {
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+}

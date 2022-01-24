@@ -1,0 +1,137 @@
+.woocommerce {
+  &-cart {
+    margin-top: $spacer*12;
+
+    @include Montserrat;
+
+    .woocommerce {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include breakpoint(medium) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .woocommerce-cart-form {
+      @include shadowCard;
+
+      background-color: $grey-light;
+
+      table {
+        margin: 0;
+        padding: $spacer/2;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        tbody {
+          .product-name {
+            padding: $spacer;
+
+            a {
+              color: $pink;
+            }
+          }
+
+          .product-remove {
+            a {
+              color: $pink !important;
+
+              &:hover {
+                color: $white !important;
+                background-color: $pink !important;
+              }
+            }
+          }
+        }
+      }
+
+      img.attachment-woocommerce_thumbnail {
+        width: 125px;
+      }
+
+      thead {
+        th {
+          font-weight: 600;
+        }
+      }
+
+      .product-subtotal {
+        color: $pink;
+      }
+
+      dd > p {
+        margin: 0;
+        color: $pink;
+      }
+
+      .actions {
+        background-color: $grey-light;
+
+        .coupon {
+          .input-text {
+            min-width: 250px;
+            font-size: 15px;
+            height: 45px;
+            background-color: $grey-bk;
+            border-radius: 4px;
+          }
+
+          .button {
+            padding: $spacer;
+            background-color: $grey-medium;
+            //border: 1px solid $pink;
+            color: $white;
+            font-weight: 400;
+            border-radius: 0;
+            margin-left: $spacer*2;
+          }
+        }
+
+        button[name="update_cart"] {
+          background-color: $pink;
+          color: $white;
+          padding: $spacer;
+          border-radius: 0;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .cart-collaterals {
+      @include breakpoint(medium) {
+        max-width: 30%;
+      }
+
+      .cart_totals {
+        width: 90%;
+
+        table {
+          border-color: $pink;
+        }
+
+        .cart-subtotal {
+          th {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    #payment {
+      background-color: transparent;
+    }
+
+    .wc-proceed-to-checkout a.checkout-button {
+      background-color: $pink;
+      font-weight: 500;
+      font-size: 18px;
+
+      @include Montserrat;
+    }
+  }
+}
+
+.woocommerce-checkout #payment {
+  background: transparent;
+}

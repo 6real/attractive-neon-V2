@@ -1,0 +1,17 @@
+.products-skills {
+  padding: $spacer*2;
+
+  h2 {
+    @include Poppins;
+
+    font-weight: 600;
+    color: $white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+
+    @include breakpoint(medium) {
+      font-size: 55px;
+      transform: translateX(-60px);
+    }
+  }
+}

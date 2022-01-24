@@ -1,0 +1,140 @@
+body.archive.woocommerce {
+  @include Montserrat;
+
+  .content {
+    padding-left: $spacer*2;
+    padding-right: $spacer*2;
+
+    @include breakpoint(medium) {
+      @include container("normal");
+    }
+  }
+
+  .woocommerce-products-header {
+    text-align: center;
+    margin-top: $spacer*2;
+    padding: $spacer;
+
+    h1 {
+      color: $grey-medium;
+      letter-spacing: 0.02rem;
+    }
+
+    .term-description {
+      p {
+        @include p;
+
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+
+        @include breakpoint(medium) {
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .woocommerce-breadcrumb {
+    padding: $spacer;
+
+    a {
+      color: $pink;
+
+      &:first-of-type {
+        display: none;
+      }
+    }
+  }
+
+  .archive-header {
+    display: flex;
+
+    &-marketing {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: $grey-dark;
+      padding: $spacer*2;
+      background: $grey-light;
+      width: 35%;
+
+      @include breakpoint(medium) {
+        display: flex;
+      }
+
+      img {
+        width: 40px;
+        display: block;
+        margin: 0 auto $spacer;
+      }
+
+      strong {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .categoriesList {
+    background: $grey-dark;
+    padding: $spacer*2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint(medium) {
+      width: 65%;
+      margin: 0;
+    }
+
+    h3 {
+      color: $white;
+      margin: 0 0 $spacer;
+      width: 100%;
+    }
+
+    &-item {
+      list-style-type: none;
+      margin-left: $spacer;
+      margin-bottom: $spacer/1.5;
+
+      @include breakpoint(medium) {
+        width: 45%;
+      }
+
+      &-link {
+        color: $white;
+        text-decoration: none;
+        position: relative;
+        z-index: 0;
+
+        @include puce;
+      }
+
+      &-count {
+        color: $pink;
+      }
+    }
+  }
+
+  .woocommerce-result-count {
+    padding: 0 $spacer;
+
+    &::first-letter {
+      color: $pink;
+      font-weight: 800;
+    }
+  }
+
+  .woocommerce-ordering {
+    margin: 0 0 $spacer*2;
+    padding: $spacer;
+
+    select {
+      background: $grey-light;
+      border: 0;
+      padding: $spacer/2;
+    }
+  }
+}

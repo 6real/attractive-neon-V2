@@ -1,0 +1,54 @@
+.woocommerce {
+  .woocommerce-MyAccount-navigation {
+    @include shadowCard;
+
+    background: $grey-dark;
+
+    ul {
+      list-style-type: none;
+      padding: 25px;
+
+      li {
+        margin-bottom: $spacer;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: $white;
+          text-decoration: none;
+          border-bottom: 1px solid $pink;
+        }
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    mark {
+      background: $pink;
+      padding: 5px;
+      color: $white;
+    }
+  }
+
+  .woocommerce-EditAccountForm {
+    @include Poppins;
+
+    input {
+      height: 40px;
+      border-radius: 4px;
+      padding-left: $spacer;
+      border-color: $pink;
+    }
+    //input[type="text"] {
+    //}
+
+    .woocommerce-Button {
+      border: 1px solid $pink;
+      color: $pink;
+      padding: $spacer;
+      font-weight: 400;
+    }
+  }
+}

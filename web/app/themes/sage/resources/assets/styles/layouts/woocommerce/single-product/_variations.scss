@@ -1,0 +1,59 @@
+.variations {
+  @include Montserrat;
+
+  tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        width: 50%;
+      }
+
+      .label {
+        label {
+          font-weight: 400 !important;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+      }
+
+      .value {
+        position: relative;
+
+        select {
+          padding: $spacer/1.1;
+          font-size: 14px;
+          background: $grey-dark;
+          color: $white;
+          background-position-x: 244px;
+          -webkit-appearance: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 9;
+          width: 15px;
+          height: 15px;
+          right: 30%;
+          top: $spacer;
+          transform: rotate(90deg);
+          background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'><path d='M4.29679 2.66704L12.7366 7.53975L4.29679 12.4125C7.68481 9.10229 7.65242 6.96309 4.29679 2.66704Z' fill='#{url-friendly-colour('#F91FFF')}'/></svg>");
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}

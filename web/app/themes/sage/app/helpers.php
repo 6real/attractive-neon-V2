@@ -4,6 +4,10 @@ namespace App;
 
 use Roots\Sage\Container;
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+
 /**
  * Get the sage container.
  *

@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Poppins:wght@200;300;400;600;800&display=swap");
+
+@mixin Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin Poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}

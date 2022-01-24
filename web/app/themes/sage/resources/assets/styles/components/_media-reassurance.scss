@@ -1,0 +1,69 @@
+.media-reassurance {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+
+  &-archive {
+    @include container(wide);
+
+    margin-top: $spacer*4;
+  }
+
+  &-col {
+    background: $grey-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    margin: -6px auto;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+
+    &:first-of-type {
+      background: $grey-light;
+      color: $grey-dark;
+    }
+
+    @include breakpoint(medium) {
+      position: unset;
+      padding: 40px;
+      width: 33%;
+      margin: 0;
+    }
+  }
+
+  &-content {
+    position: relative;
+    margin-top: $spacer*2;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &-media {
+    margin: -40% auto -40%;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+
+    @include breakpoint(medium) {
+      min-height: 400px;
+      max-height: unset;
+      width: 33%;
+      margin: unset;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

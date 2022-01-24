@@ -1,0 +1,45 @@
+.single-mailpoet_page {
+  main {
+    @include container(wide);
+    @include Montserrat;
+
+    margin-top: $spacer*6;
+
+    @include breakpoint(medium) {
+      margin-top: $spacer*12;
+    }
+
+    time {
+      display: none;
+    }
+
+    input[type="text"] {
+      //height: 40px;
+      border: 2px solid $pink;
+      font-size: 18px;
+      padding: $spacer;
+      margin-top: $spacer;
+    }
+
+    input[type="submit"] {
+      @include Poppins;
+
+      font-size: 18px;
+      background: $pink;
+      color: $grey-light;
+      padding: $spacer/2 $spacer*2;
+    }
+
+    .mailpoet_validate_success {
+      @include Montserrat;
+
+      font-weight: 600;
+      transform: none !important;
+      top: unset !important;
+      left: unset !important;
+      text-align: left !important;
+      position: relative !important;
+      margin: $spacer*2 0 !important;
+    }
+  }
+}
