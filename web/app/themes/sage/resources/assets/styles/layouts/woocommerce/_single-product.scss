@@ -1,14 +1,13 @@
 body.single.single-product {
   main {
     @include Montserrat;
+    @apply mt-8 px-2;
 
-    margin-top: $spacer*6;
-    padding: 0 $spacer*2;
+    //padding: 0 $spacer*2;
 
     @include breakpoint(medium) {
       @include container("normal");
-
-      margin-top: $spacer*12;
+      @apply mt-12;
     }
 
     .entry-summary {

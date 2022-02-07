@@ -97,7 +97,7 @@ add_filter('comments_template', function ($comments_template) {
     return $comments_template;
 }, 100);
 
-//Add searchform to nav
+//SEARCH FORM
 add_filter('wp_nav_menu_items', function ($items, $args) {
     if ($args->theme_location == "primary_navigation") {
         $items .= template('searchform');

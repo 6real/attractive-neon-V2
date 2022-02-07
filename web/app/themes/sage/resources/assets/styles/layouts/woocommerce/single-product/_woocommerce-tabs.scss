@@ -1,10 +1,6 @@
 .product > .woocommerce-tabs.wc-tabs-wrapper {
   padding-top: $spacer;
 
-  @include breakpoint(medium) {
-    padding-top: $spacer*4;
-  }
-
   .tabs.wc-tabs {
     padding: 0;
     margin: 0;

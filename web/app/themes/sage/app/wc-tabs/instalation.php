@@ -10,10 +10,9 @@ function instalation_markup()
 {
     $html = '
 
-<section class="wc_tabs-shipping">
-    <h2>' . __('L\'installation', 'attractive') . '</h2>
-    <div>
-        <h3>
+<section class="wc_tabs-shipping mt-8">
+   <div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-box-open"></i>
              <span>' . __('Ouvrir le colis', 'attractive') . '</span>
         </h3>
@@ -25,8 +24,8 @@ function instalation_markup()
             <li>' . __('Un adaptateur basse tension et une prise 12V (EU/US/UK/AU, en fonction du pays de livraison)', 'attractive') . '</li>
         </ul>
     </div>
-    <div>
-        <h3>
+<div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-tools"></i>
             <span>' . __('Fixer au mur', 'attractive') . '</span>
         </h3>
@@ -36,8 +35,8 @@ function instalation_markup()
             <li>' . __('Placer le panneau en face des trous sur les entretoises et vissez fermement la partie supérieure de chaque entretoise. ', 'attractive') . '</li>
         </ul>
     </div>
-    <div>
-        <h3>
+   <div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-lightbulb"></i>
             <span>' . __('Branchez votre néon', 'attractive') . '</span>
         </h3>

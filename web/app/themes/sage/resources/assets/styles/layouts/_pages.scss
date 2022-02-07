@@ -1,23 +1,23 @@
-body.page:not(.home) {
-  main {
-    margin-top: $spacer*6;
-
-    @include breakpoint(medium) {
-      margin-top: $spacer*12;
-    }
-  }
-}
-
-.neon-personnalise,
-.mon-neon-personnalise {
-  main {
-    margin-top: $spacer*4 !important;
-
-    @include breakpoint(medium) {
-      margin-top: $spacer*8 !important;
-    }
-  }
-}
+//body.page:not(.home) {
+//  main {
+//    margin-top: $spacer*6;
+//
+//    @include breakpoint(medium) {
+//      margin-top: $spacer*12;
+//    }
+//  }
+//}
+//
+//.neon-personnalise,
+//.mon-neon-personnalise {
+//  main {
+//    margin-top: $spacer*4 !important;
+//
+//    @include breakpoint(medium) {
+//      margin-top: $spacer*8 !important;
+//    }
+//  }
+//}
 
 body.page {
   padding-top: 0;

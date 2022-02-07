@@ -54,4 +54,7 @@
     do_action( 'woocommerce_after_single_product_summary' );
   @endphp
 </div>
+
+@include('woocommerce.single-product.product-specification')
+
 @php do_action( 'woocommerce_after_single_product' ); @endphp

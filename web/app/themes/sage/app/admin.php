@@ -36,12 +36,24 @@ add_action('acf/init', function () {
             'position' => 2,
             'icon_url' => 'dashicons-share-alt'
         ));
+        acf_add_options_sub_page(array(
+            'page_title' => __('Archives Settings'),
+            'menu_title' => __('Archives Settings'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
+
+        acf_add_options_sub_page(array(
+            'page_title' => __('Products Settings'),
+            'menu_title' => __('Products Settings'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
 
         acf_add_options_sub_page(array(
             'page_title' => __('Generator Settings'),
             'menu_title' => __('Generator'),
             'parent_slug' => $parent['menu_slug'],
         ));
+
     }
 });
 

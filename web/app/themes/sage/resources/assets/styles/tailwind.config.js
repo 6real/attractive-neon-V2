@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: false,
     content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/**/*.php', './app/*.php' ],
   },
   theme: {
@@ -10,6 +10,7 @@ module.exports = {
         primary: '#f91fff',
         'primary-hover': '#f166f5',
         white: '#fff',
+        dark:'#1d202c',
         grey: '#eaebef',
         gray: {
           100: '#f7fafc',

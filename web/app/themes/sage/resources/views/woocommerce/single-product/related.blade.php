@@ -48,7 +48,6 @@ if ( $related_products ) : ?>
 
 	</section>
 
-{!! do_shortcode('[jgm-featured-carousel]') !!}
 	<?php
 endif;
 

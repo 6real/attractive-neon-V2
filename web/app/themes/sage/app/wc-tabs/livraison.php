@@ -10,17 +10,17 @@ function shipping_markup()
 {
     $html = '
 
-<section class="wc_tabs-shipping">
-    <h2>' . __('La livraison', 'woocommerce') . '</h2>
-    <div>
-        <h3>
+<section class="wc_tabs-shipping mt-8">
+    <div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-box-open"></i>
              <span>' . __('Expédition dans le monde entier', 'woocommerce') . '</span>
         </h3>
         <p>' . __('Nous expédions gratuitement dans le monde entier à partir de 350€ d’achat. Le type de prise est adapté en fonction du pays d’expédition. ', 'woocommerce') . '</p>
     </div>
-    <div>
-        <h3>
+
+    <div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-dolly-flatbed"></i>
             <span>' . __('Délais et suivi de livraison', 'woocommerce') . '</span>
         </h3>
@@ -30,8 +30,9 @@ function shipping_markup()
         </ul>
         <p>' . __('Nous vous tiendrons informé par e-mail de l\'état d’avancement de votre commande à chaque étape du processus.', 'woocommerce') . '</p>
     </div>
-    <div>
-        <h3>
+
+    <div class="mb-6">
+        <h3 class="my-4">
             <i class="fas fa-sync"></i>
             <span>' . __('Garantie de livraison', 'woocommerce') . '</span>
         </h3>

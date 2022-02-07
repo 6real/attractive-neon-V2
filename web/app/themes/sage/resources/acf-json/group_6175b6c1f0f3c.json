@@ -249,7 +249,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-theme-settings"
+                "value": "acf-options-archives-settings"
             }
         ]
     ],
@@ -261,5 +261,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635105124
+    "show_in_rest": 0,
+    "modified": 1644216040
 }
