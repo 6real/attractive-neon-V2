@@ -98,13 +98,13 @@ add_filter('comments_template', function ($comments_template) {
 }, 100);
 
 //SEARCH FORM
-add_filter('wp_nav_menu_items', function ($items, $args) {
-    if ($args->theme_location == "primary_navigation") {
-        $items .= template('searchform');
-    }
-
-    return $items;
-}, 10, 2);
+//add_filter('wp_nav_menu_items', function ($items, $args) {
+//    if ($args->theme_location == "primary_navigation") {
+//        $items .= template('searchform');
+//    }
+//
+//    return $items;
+//}, 10, 2);
 
 add_filter('wp_mail_content_type', function () {
     return "text/html";

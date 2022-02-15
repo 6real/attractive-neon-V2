@@ -1,164 +1,145 @@
 @php
-  $isTransparent = is_front_page() ? 'transparent' : '';
-  $colorFont = is_front_page() ? '#FFF' : '#32374C';
-@endphp
+  @endphp
 
 
-{{--<header class="bg-white fixed w-full z-50" >--}}
+<header class="bg-white shadow" x-data="{ openMobile: false }">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">
+    <div class="relative h-16 flex justify-between">
 
-
-
-  <header data-module-header x-data="{ openMobile: false }">
-
-
-    <div class="relative bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-
-          <div class="flex justify-start lg:w-0 lg:flex-1">
-            <!-- Logo & Open Mobile  -->
-
-            <a href="{{home_url()}}">
-              <span class="sr-only">Workflow</span>
-              <img class="block max-h-4" src="@php esc_attr_e(get_field('logo_full', 'option')['url']);  @endphp" alt="Attractive Neon Logo">
-            </a>
-          </div>
-          <div class="-mr-2 -my-2 md:hidden">
-            <button @click="openMobile = ! openMobile" type="button"
-                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
-                    aria-expanded="false">
-              <span class="sr-only">Open menu</span>
-              <!-- Heroicon name: outline/menu -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-              </svg>
-            </button>
-          </div>
-
-
-          <!-- MENU DESKTOP -->
-          @if (has_nav_menu('primary_navigation'))
-            {{wp_nav_menu(
-                  ['theme_location' => 'primary_navigation',
-                   'menu_class' => 'hidden md:flex items-center',
-                   'container_class' => 'hidden md:block',
-                   'container' => 'div',
-                   'walker'=> new Walker_Primary()]
-             ) }}
-          @endif
-          @if(!empty($contact_link))
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="{{get_the_permalink($contact_link->ID)}}"
-                 class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-700">
-                Nous contacter
-              </a>
-            </div>
-          @endif
-
+      {{--      LOGO      --}}
+      <div class="relative z-10 px-2 flex lg:px-0">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="{{home_url()}}">
+            <img class="hidden lg:block h-8 w-auto" src="@php esc_attr_e(get_field('logo_full', 'option')['url']);  @endphp" alt="Attractive Neon Logo">
+            <img class="lg:hidden block h-12 w-auto" src="@php esc_attr_e(get_field('logo_mobile', 'option')['url']);  @endphp" alt="Attractive Neon Logo V2">
+          </a>
         </div>
       </div>
 
-      <!--
-        Mobile menu, show/hide based on mobile menu state.
+      {{--      Search      --}}
 
-        Entering: "duration-200 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
-      <div
-        x-cloak
-        x-show="openMobile"
-        @click.outside="openMobile = false"
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 scale-90"
-        x-transition:enter-end="opacity-100 scale-100"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 scale-100"
-        x-transition:leave-end="opacity-0 scale-90"
+      <div class="relative z-0 flex-1 px-2 flex items-center justify-center sm:absolute sm:inset-0">
+        <div class="w-full sm:max-w-xs">
+          <label for="search" class="sr-only">Rechercher</label>
+          <div class="relative">
+            <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
 
-        class="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-        <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-          <div class="pt-5 pb-6 px-5">
-            <div class="flex items-center justify-between">
-              <div>
-                  <img class="block lg:hidden" src="@php esc_attr_e(get_field('logo_mobile', 'option')['url']);  @endphp" alt="Attractive Neon Logo mobile">
-              </div>
-              <div class="-mr-2">
-                <button @click="openMobile = ! openMobile" type="button"
-                        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
-                  <span class="sr-only">Close menu</span>
-                  <!-- Heroicon name: outline/x -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                       stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
-                </button>
-              </div>
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                   fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clip-rule="evenodd"/>
+              </svg>
             </div>
-
-            {{wp_nav_menu(
-                          ['theme_location' => 'primary_navigation',
-                           'menu_class' => 'grid gap-y-8',
-                           'container_class' => 'mt-6',
-                           'container' => 'div',
-                           'walker'=> new Walker_Primary_Mobile()]
-                     ) }}
-
-          </div>
-          <div class="py-6 px-5 space-y-6">
-            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Pricing
-              </a>
-
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Docs
-              </a>
-
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Help Center
-              </a>
-
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Guides
-              </a>
-
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Events
-              </a>
-
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                Security
-              </a>
-            </div>
-            <div>
-              <a href="#"
-                 class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-700">
-                Sign up
-              </a>
-              <p class="mt-6 text-center text-base font-medium text-gray-500">
-                Existing customer?
-                <a href="#" class="text-primary-600 hover:text-primary-500">
-                  Sign in
-                </a>
-              </p>
-            </div>
+            <input id="search" name="search"
+                   class="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm"
+                   placeholder="Rechercher un produit" type="search">
           </div>
         </div>
+      </div>
+
+
+      <!-- Mobile menu button -->
+      <div class="relative z-10 flex items-center lg:hidden">
+        <button @click="openMobile = ! openMobile"
+                type="button"
+                class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+
+          <svg x-show="!openMobile"
+               class="block h-6 w-6 relative z-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+
+          <svg x-cloak
+               x-show="openMobile"
+              class="block relative z-10 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+
+      <div class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
+
+
+        <a class="flex-shrink-0 bg-white rounded-full p-1 text-gray-900 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+          <span class="sr-only">Panier</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </a>
+
+        <a class="flex-shrink-0 bg-white rounded-full p-1 text-gray-900 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+          <span class="sr-only">Compte</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </a>
+
       </div>
     </div>
-  </header>
+
+    {{--  Nav Menu  --}}
+    @if (has_nav_menu('primary_navigation'))
+      {{wp_nav_menu(
+            ['theme_location' => 'primary_navigation',
+             'menu_class' => 'hidden lg:py-2 lg:flex lg:space-x-8 items-center',
+             'container_class' => 'hidden md:block',
+             'container' => 'div',
+             'walker'=> new Walker_Primary()]
+       ) }}
+    @endif
+  </div>
 
 
-{{--<div class="topBar">--}}
-{{--  @foreach(get_field('items', 'option') as $item)--}}
-{{--    <div class="topBar-item">--}}
-{{--      <img src="{{$item['icon']['url']}}" alt="{{$item['icon']['alt']}}">--}}
-{{--      <p>{{$item['text']}}</p>--}}
-{{--    </div>--}}
-{{--  @endforeach--}}
-{{--</div>--}}
+  {{--  Nav Menu Mobile  --}}
+  <nav   x-cloak
+         x-show="openMobile"
+         @click.outside="openMobile = false"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 scale-90"
+         x-transition:enter-end="opacity-100 scale-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 scale-100"
+         x-transition:leave-end="opacity-0 scale-90"
+         class="lg:hidden" aria-label="Global" id="mobile-menu">
+
+
+    <div class="pt-2 pb-3 px-2">
+      @if (has_nav_menu('primary_navigation'))
+        {{wp_nav_menu(
+           ['theme_location' => 'primary_navigation',
+            'menu_class' => 'grid gap-y-8',
+            'container_class' => 'mt-6 ml-4',
+            'container' => 'div',
+            'walker'=> new Walker_Primary_Mobile()])
+        }}
+      @endif
+
+
+    <div class="relative flex lg:hidden items-center justify-around py-4 px-3 mt-6">
+
+      <a class="flex w-1/2 items-center justify-center gap-2 flex-shrink-0 bg-gray-200 rounded p-4 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span class="lg:hidden">Panier</span>
+
+      </a>
+
+      <a class="flex w-1/2 items-center justify-center gap-2 flex-shrink-0 bg-gray-200 rounded p-4 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="lg:hidden">Compte</span>
+
+      </a>
+
+    </div>
+  </nav>
+
+</header>
