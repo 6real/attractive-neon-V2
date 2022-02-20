@@ -1,61 +1,39 @@
 .woocommerce-product-gallery {
+  @apply float-none w-full lg:w-1/2 lg:pr-6  #{!important};
+
   &__main {
     position: relative;
     z-index: 1;
-    border-radius: 4px;
-    margin: 0 0 $spacer*2 0;
+    @apply relative z-10 mb-4;
 
-    @include breakpoint(medium) {
-      margin-bottom: $spacer;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      bottom: 0;
-      left: 0;
-      margin: -7px -7px;
-      background-color: $pink;
-      background-image: linear-gradient(to right, $grey-dark, rgba(255, 255, 255, 0));
-      transition: all 0.3s;
-    }
-
-    &:hover {
-      &::after {
-        background-color: rgba($pink, 0.6);
-      }
+    img {
+      @apply rounded-lg;
     }
   }
 
   &__image {
-    min-width: 100px;
-    margin-right: $spacer/2;
-    margin-bottom: $spacer;
-
-    @include breakpoint(medium) {
-      max-width: 100px;
-    }
+    @apply mr-2;
 
     &--thumbs {
-      display: flex;
-      overflow-x: scroll;
-      padding-bottom: 0;
+      @apply flex overflow-x-scroll pb-0;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
 
       @include breakpoint(medium) {
-        flex-wrap: wrap;
-        overflow: hidden;
+        @apply flex-wrap overflow-hidden;
       }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
     }
 
     &:last-of-type {
-      margin: 0;
+      @apply m-0;
     }
 
     img {
-      margin: 0;
+      @apply rounded-lg h-28 w-28 max-w-none #{!important};
     }
   }
 }

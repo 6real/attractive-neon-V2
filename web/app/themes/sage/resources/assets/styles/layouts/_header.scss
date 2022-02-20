@@ -1,12 +1,9 @@
-//header {
-//  .brand {
-//    img {
-//      //@apply h-4 w-auto sm:h-10 !important;
-//      //height: 1.6rem;
-//      height: 3rem;
-//      @include breakpoint(medium){
-//        height:2.4rem;
-//      }
-//    }
-//  }
-//}
+header {
+  img {
+    @apply h-8 w-auto #{!important};
+
+    @include breakpoint(medium) {
+      @apply h-8 w-auto #{!important};
+    }
+  }
+}

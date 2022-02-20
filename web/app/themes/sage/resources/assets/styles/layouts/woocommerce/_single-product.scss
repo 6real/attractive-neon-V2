@@ -10,38 +10,25 @@ body.single.single-product {
       @apply mt-12;
     }
 
+    .summary {
+      @apply float-none w-full md:w-1/2 lg:pl-6 #{!important};
+    }
+
     .entry-summary {
       .price {
-        color: $pink;
-        margin: 0;
-        font-weight: 500;
-      }
-
-      .woocommerce-breadcrumb {
-        color: $grey-bk;
-        transform: translateX(-15px);
-
-        a:first-of-type {
-          display: none;
-        }
-
-        a:last-of-type {
-          color: $pink;
-
-          &::after {
-            content: none !important;
-          }
-        }
-
-        a:not(:first-of-type) {
-          text-decoration: none;
-
-          &::after {
-            content: "/";
-            margin-left: $spacer;
-          }
+        @apply text-dark text-lg mb-4;
+        .amount {
+          @apply text-primary font-medium text-lg mb-4;
         }
       }
+      .woocommerce-breadcrumb{
+        @apply text-primary font-semibold text-xs #{!important};
+
+        a {
+          @apply text-medium font-normal text-xs #{!important};
+        }
+      }
+
 
       .reset_variations {
         color: $pink;

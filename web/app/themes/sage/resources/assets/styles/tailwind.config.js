@@ -14,7 +14,7 @@ module.exports = {
   purge: {
     enabled: true,
     // safelist: [''],
-    content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/*.php', './resources/views/**/**/*.php', './app/*.php' ],
+    content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/*.php', './resources/views/**/**/*.php', './resources/views/**/**/**/*.php', './app/*.php' ],
   },
   theme: {
     important: true,

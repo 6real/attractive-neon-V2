@@ -12,7 +12,7 @@
   @endphp
 @endif
 
-<div id="product-{{the_ID()}}" {{wc_product_class( '', $product )}}>
+<div id="product-{{the_ID()}}" {{wc_product_class( 'flex flex-col lg:flex-row flex-wrap', $product )}}>
 
   @php
     /**
@@ -38,7 +38,7 @@
        * @hooked woocommerce_template_single_sharing - 50
        * @hooked WC_Structured_Data::generate_product_data() - 60
        */
-        woocommerce_breadcrumb();
+        woocommerce_breadcrumb(['home' => false]);
         do_action( 'woocommerce_single_product_summary' );
     @endphp
   </div>
@@ -55,6 +55,5 @@
   @endphp
 </div>
 
-@include('woocommerce.single-product.product-specification')
 
 @php do_action( 'woocommerce_after_single_product' ); @endphp
