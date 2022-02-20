@@ -1,17 +1,34 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
+
+
 module.exports = {
   purge: {
-    enabled: false,
-    content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/**/*.php', './app/*.php' ],
+    enabled: true,
+    // safelist: [''],
+    content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/*.php', './resources/views/**/**/*.php', './app/*.php' ],
   },
   theme: {
     important: true,
     extend: {
+      fontFamily:{
+        primary:['Montserrat', "sans-serif"],
+        secondary:['Poppins', "sans-serif"]
+      },
       colors: {
-        primary: '#f91fff',
-        'primary-hover': '#f166f5',
-        white: '#fff',
-        dark:'#1d202c',
-        grey: '#eaebef',
+        primary: withOpacity("--color-primary"),
+        white: withOpacity("--color-white"),
+        dark: withOpacity("--color-grey-dark"),
+        medium: withOpacity("--color-grey-medium"),
+        light: withOpacity("--color-grey-light"),
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
@@ -38,5 +55,7 @@ module.exports = {
     },
 
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

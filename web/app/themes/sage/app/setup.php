@@ -15,11 +15,19 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery', 'wp-api'], null, true);
-    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/4274cb93ab.js', '', null, true);
-    wp_enqueue_script('paypal', 'https://www.paypal.com/sdk/js?client-id=AdST1BYGjh0mVzAfIy1M4OlW_6U3ef5YUjHK3nGejjXvMZGqIcz7GirBk22y7XuVYNLmnxwxLHKsrUMM&currency=EUR&components=messages', '', null, false);
-    wp_enqueue_script('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js', '', null, true);
+    if(!is_admin()){
+        wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/4274cb93ab.js', '', null, true);
+        wp_enqueue_script('paypal', 'https://www.paypal.com/sdk/js?client-id=AdST1BYGjh0mVzAfIy1M4OlW_6U3ef5YUjHK3nGejjXvMZGqIcz7GirBk22y7XuVYNLmnxwxLHKsrUMM&currency=EUR&components=messages', '', null, false);
+        wp_enqueue_script('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js', '', null, true);
+        wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery', 'wp-api'], null, true);
+    }
+
+    if(WP_ENV != 'development'){
+        wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    }
+
+
+
 
     add_filter('script_loader_tag', function ($tag, $handle) {
         if ('paypal' !== $handle)
@@ -36,9 +44,9 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_localize_script('sage/main.js', 'ajax_object', $ajax_params);
 
-    if (is_single() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+//    if (is_single() && comments_open() && get_option('thread_comments')) {
+//        wp_enqueue_script('comment-reply');
+//    }
 }, 100);
 
 add_filter('script_loader_tag', function ($tag, $handle) {
@@ -49,8 +57,7 @@ add_filter('script_loader_tag', function ($tag, $handle) {
 
 
 add_action('enqueue_block_editor_assets', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+        wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
 });
 
 /**
@@ -106,7 +113,7 @@ add_action('after_setup_theme', function () {
      * Use main stylesheet for visual editor
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
-    add_editor_style(asset_path('styles/main.css'));
+//    add_editor_style(asset_path('styles/main.css'));
 }, 20);
 
 /**

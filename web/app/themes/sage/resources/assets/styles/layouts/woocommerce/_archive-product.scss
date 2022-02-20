@@ -22,15 +22,7 @@ body.archive.woocommerce {
 
     .term-description {
       p {
-        @include p;
-
-        font-size: 14px;
-        line-height: 16px;
         text-align: center;
-
-        @include breakpoint(medium) {
-          line-height: 18px;
-        }
       }
     }
   }

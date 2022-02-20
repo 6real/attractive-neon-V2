@@ -4,7 +4,7 @@
   Category: attractive
   Icon: grid-view
   Keywords: media text
-  Mode: edit
+  Mode: auto
   PostTypes: page post
   SupportsMode: true
   SupportsMultiple: true

@@ -1,0 +1,19 @@
+//Set the Tailwind theme
+
+$pink: rgb(249, 31, 255);
+
+$grey-dark: rgb(29, 32, 44);
+$grey-medium: rgb(61, 62, 66);
+$grey-light: rgb(244, 245, 247);
+
+$grey-bk: rgb(234, 235, 239);
+$white: rgb(255, 255, 255);
+
+:root {
+  --color-primary: 249, 31, 255;
+  --color-grey-dark: 29, 32, 44;
+  --color-grey-medium: 61, 62, 66;
+  --color-grey-light: 244, 245, 247;
+  --color-background: 234, 235, 239;
+  --color-white: 255, 255, 255;
+}

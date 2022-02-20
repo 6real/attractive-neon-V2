@@ -4,7 +4,7 @@
   Category: attractive
   Icon: admin-comments
   Keywords: custom Product skills
-  Mode: edit
+  Mode: auto
   Align: full
   PostTypes: page post
   SupportsMode: true

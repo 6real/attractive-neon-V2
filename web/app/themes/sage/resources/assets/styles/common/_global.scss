@@ -1,25 +1,14 @@
+$spacer: 0.625rem;
+
 body,
 html {
   z-index: 1;
   margin: 0;
   background: $grey-bk;
   overflow-x: hidden;
+  @apply box-border;
 }
 
-html[href] {
-  margin-bottom: 0;
+img {
+  border-style: none;
 }
-
-h1,
-h2,
-h3,
-span,
-a {
-  @include Montserrat;
-}
-
-p {
-  @include p;
-}
-
-$spacer: 1rem;

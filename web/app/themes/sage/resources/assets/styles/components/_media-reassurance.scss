@@ -1,75 +1,55 @@
 .media-reassurance {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col mt-8;
 
   @include breakpoint(medium) {
-    flex-direction: row;
+    @apply flex-row mt-8;
   }
 
   &-archive {
     @include container(wide);
-
-    margin-top: $spacer*4;
+    @apply mt-8;
   }
 
   &-col {
-    background: $grey-dark;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $white;
-    margin: -6px auto;
-    padding: 30px;
-    position: relative;
-    z-index: 1;
+    @apply flex flex-col justify-center relative p-12 z-10 box-border;
 
     &:first-of-type {
-      background: $grey-light;
-      color: $grey-dark;
+      @apply bg-white;
+      h3, p {
+        @apply text-dark;
+      }
     }
 
+    &:last-of-type {
+      @apply bg-dark ;
+      h3, p {
+        @apply text-white;
+      }
+    }
+
+
     @include breakpoint(medium) {
-      position: unset;
-      padding: 40px;
-      width: 33%;
-      margin: 0;
+      @apply relative p-12 w-1/3;
     }
   }
 
   &-content {
-    position: relative;
-    margin-top: $spacer*2;
-    text-align: center;
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin: $spacer 0;
-    }Attractive Neon Logo
+    @apply relative mt-8 text-center;
 
     img {
-      display: block;
-      margin: 0 auto;
+      @apply block mx-auto;
+    }
+
+    h3 {
+      @apply text-lg font-bold my-4;
     }
   }
 
   &-media {
-    margin: -40% auto -40%;
-    width: 100%;
-    position: relative;
-    z-index: 0;
+    @apply -mt-32 -mb-32 relative z-0;
 
     @include breakpoint(medium) {
-      min-height: 400px;
-      max-height: unset;
-      width: 33%;
-      margin: unset;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @apply min-h-full w-1/3 m-0 object-cover;
     }
   }
 }

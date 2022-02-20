@@ -1,17 +1,31 @@
-.wp-block-buttons {
-  .wp-block-button {
-    &__link {
-      background: $pink;
-      font-size: 14px;
-      padding: 12px 25px;
-    }
-  }
+.btn-primary {
+  @apply bg-primary text-white border-2 border-primary text-sm py-4 px-6;
+}
 
-  .is-style-outline {
+.btn-secondary {
+  @apply bg-dark text-white border-2 border-primary text-sm py-4 px-6;
+}
+
+.wp-block-buttons {
+
+  .wp-block-button {
+
     .wp-block-button__link {
-      border: 2px solid $pink;
-      background: $grey-dark;
-      color: $white;
+      @apply btn-primary my-4;
+    }
+
+    //Style Fill (Default)
+    &.is-style-fill {
+      .wp-block-button__link {
+        @apply btn-primary my-4;
+      }
+    }
+
+    //Style Outline
+    &.is-style-outline {
+      .wp-block-button__link {
+        @apply btn-secondary my-4;
+      }
     }
   }
 }

@@ -3,20 +3,15 @@
  * Normalize.css and some additional base styles.
  */
 
-/** Import variables */
-@import "common/variables";
-
-//@import "tailwindcss/base";
-//@import "tailwindcss/components";
-//@import "tailwindcss/utilities";
-
-
-
+/** Import theme */
+@import "common/palette-colors";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "common/fonts";
+@import "common/global";
+
 @import "common/mediaqueries";
 @import "common/svg-encode";
 @import "common/container";
@@ -29,22 +24,16 @@
 /** Import theme styles */
 
 /** Commons theme styles */
-@import "common/global";
-@import "common/colors";
+@import "common/gutenberg-colors";
 @import "common/acf-editor";
 @import "common/puce";
 @import "common/shadows";
-@import "common/custom_loader";
-@import "common/links";
 
 /** Components theme styles */
 @import "components/buttons";
-@import "components/list";
 @import "components/toggleButton";
-@import "components/title";
 @import "components/comments";
 @import "components/forms";
-@import "components/wp-classes";
 @import "components/wp-block-image";
 @import "components/wc-block-product-categories";
 @import "components/wp-block-gallery";

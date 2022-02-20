@@ -1,10 +1,11 @@
+
 {{--
   Title: Banner Marketing
   Description: Media text for landing page
   Category: attractive
   Icon: grid-view
   Keywords: banner
-  Mode: edit
+  Mode: auto
   PostTypes: page post
   SupportsMode: true
   SupportsMultiple: true

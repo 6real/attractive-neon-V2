@@ -4,7 +4,7 @@
   Category: attractive
   Icon: admin-comments
   Keywords: testimonial quote
-  Mode: edit
+  Mode: auto
   Align: full
   PostTypes: page post
   SupportsMode: true
