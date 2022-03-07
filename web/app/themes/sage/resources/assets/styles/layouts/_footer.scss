@@ -1,5 +1,5 @@
 footer {
-  @apply bg-dark mt-4 py-2;
+  @apply bg-dark mt-4 py-2 md:py-8;
 
   .container {
     @apply relative flex flex-wrap justify-between;

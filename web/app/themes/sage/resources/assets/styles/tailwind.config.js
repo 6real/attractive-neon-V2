@@ -13,8 +13,16 @@ function withOpacity(variableName) {
 module.exports = {
   purge: {
     enabled: true,
-    // safelist: [''],
-    content: ['./resources/views/**/*.php', './resources/views/*.php', './resources/views/**/*.php', './resources/views/**/**/*.php', './resources/views/**/**/**/*.php', './app/*.php' ],
+    safelist: ['w-40','h-40'],
+    content: [
+      './resources/views/**/*.php',
+      './resources/views/*.php',
+      './resources/views/**/*.php',
+      './resources/views/woocommerce/*.php',
+      './resources/views/woocommerce/**/*.php',
+      './resources/views/**/**/*.php',
+      './resources/views/**/**/**/*.php',
+      './app/*.php' ],
   },
   theme: {
     important: true,
@@ -25,6 +33,7 @@ module.exports = {
       },
       colors: {
         primary: withOpacity("--color-primary"),
+        'primary-hover':'#e634ee',
         white: withOpacity("--color-white"),
         dark: withOpacity("--color-grey-dark"),
         medium: withOpacity("--color-grey-medium"),
@@ -57,5 +66,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+
   ],
 }
