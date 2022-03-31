@@ -1,50 +1,42 @@
+
 form[name="checkout"] {
-  margin-top: $spacer*8;
-
   h3 {
-    font-weight: 500;
-    font-size: 26px;
+    @apply text-3xl font-extrabold tracking-tight text-gray-900 my-4;
   }
 
-  .form-row {
-    margin-top: $spacer;
-
+  .woocommerce-billing-fields__field-wrapper, .woocommerce-checkout-review-order {
+    @apply font-primary #{!important};
     label {
-      font-weight: 400;
-    }
-
-    span {
-      input {
-        background-color: $white;
-        padding: $spacer/2 $spacer;
-        font-size: 16px;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 2px solid $pink;
-      }
+      @apply font-primary #{!important};
     }
   }
 
-  .place-order {
-    button[type="submit"] {
-      background-color: $pink;
-      padding: $spacer $spacer*2;
-      font-weight: 500;
-      font-size: 16px;
+
+  #ship-to-different-address {
+    @apply hidden;
+  }
+
+  .woocommerce-additional-fields, #mailpoet_woocommerce_checkout_optin_present_field {
+    @apply hidden;
+  }
+
+  input[type="checkbox"] {
+    @apply inline-block w-4 #{!important};
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"] {
+    @apply h-10 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md;
+  }
+
+  .woocommerce-form__label-for-checkbox, .woocommerce-privacy-policy-text > p {
+    @apply text-xs;
+
+    a {
+      @apply text-xs;
     }
   }
 }
 
-.woocommerce table.shop_table {
-  @include Poppins;
-  @include shadowCard;
-
-  background-color: $grey-light;
-  border-color: $pink;
-
-  dd > p {
-    margin: 0;
-    color: $pink;
-  }
+.woocommerce-form-coupon-toggle {
+  @apply hidden;
 }

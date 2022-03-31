@@ -1,0 +1,8 @@
+#customer_register, #customer_login {
+  p {
+    @apply text-sm #{!important};
+    & > a {
+      @apply text-sm #{!important};
+    }
+  }
+}
