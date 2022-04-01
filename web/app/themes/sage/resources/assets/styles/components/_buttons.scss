@@ -1,9 +1,9 @@
 .btn-primary {
-  @apply bg-primary text-white border-2 border-primary text-sm py-4 px-6;
+  @apply bg-primary text-white border-2 border-primary text-sm py-4 px-6 rounded #{!important};
 }
 
 .btn-secondary {
-  @apply bg-dark text-white border-2 border-primary text-sm py-4 px-6;
+  @apply bg-dark text-white border-2 border-primary text-sm py-4 px-6 rounded #{!important};
 }
 
 .wp-block-buttons {

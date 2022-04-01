@@ -1,7 +1,7 @@
 .main-media-text {
   @include container("full");
+  @apply py-32 px-0;
 
-  padding: 150px 0;
   overflow: hidden;
   color: $white;
 
@@ -18,22 +18,10 @@
   h1,
   p,
   div {
-    @apply text-white;
+    @apply text-white mx-4;
 
     @include breakpoint(medium) {
       @include container("normal");
-    }
-  }
-
-  .wp-block-buttons {
-    margin-top: $spacer*4;
-    margin-bottom: 0;
-
-    .wp-block-button:first-of-type {
-      .wp-block-button__link {
-        background: $pink;
-        margin-bottom: $spacer;
-      }
     }
   }
 }
