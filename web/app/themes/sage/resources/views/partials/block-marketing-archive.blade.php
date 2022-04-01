@@ -2,7 +2,7 @@
   $columns = get_field('columns', 'option');
 @endphp
 
-<section class="media-reassurance media-reassurance-archive" data-module-reassurance>
+<section class="media-reassurance media-reassurance-archive mb-12" data-module-reassurance>
 
   <div class="media-reassurance-col">
     @foreach ($columns['items_archive'] as $item)
