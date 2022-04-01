@@ -1,0 +1,12 @@
+.woocommerce-pagination {
+  ul.page-numbers {
+    @apply border-0 #{!important} ;
+    li {
+      @apply m-2 border-0 #{!important};
+      span,
+      a {
+        @apply -ml-px relative inline-flex items-center px-6 py-2 bg-primary hover:bg-primary text-lg text-white rounded-lg #{!important} ;
+      }
+    }
+  }
+}

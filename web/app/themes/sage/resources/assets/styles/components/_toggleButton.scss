@@ -1,0 +1,66 @@
+.toggle {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: $pink;
+  display: block;
+  border-radius: 60px;
+  box-shadow: 0 4px 4px rgba(13, 13, 13, 0.3);
+  transition: background 240ms ease-in-out, transform 240ms ease-in-out;
+
+  svg {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    opacity: 0;
+    transition: opacity 200ms ease-in-out, transform 160ms ease-in-out;
+  }
+}
+
+.toggle-light {
+  height: 30px;
+  width: 80px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background: lighten($pink, 30%);
+  border-radius: 60px;
+
+  &:hover {
+    .toggle {
+      svg {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        transition: opacity 200ms ease-in-out, transform 160ms ease-in-out;
+      }
+    }
+  }
+
+  &.active {
+    background: lighten($grey-dark, 20%);
+
+    .toggle {
+      background: $grey-dark;
+      transform: translate(60px, -50%);
+      transition: background 240ms ease-in-out, transform 240ms ease-in-out;
+
+      svg {
+        transform: translate(-36%, -50%) rotateZ(180deg);
+        transition: opacity 200ms ease-in-out, transform 160ms ease-in-out;
+      }
+    }
+
+    &:hover {
+      .toggle {
+        svg {
+          transform: translate(-46%, -50%) rotateZ(180deg);
+          transition: opacity 200ms ease-in-out, transform 160ms ease-in-out;
+        }
+      }
+    }
+  }
+}

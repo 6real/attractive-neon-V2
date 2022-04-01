@@ -1,0 +1,36 @@
+//body.page:not(.home) {
+//  main {
+//    margin-top: $spacer*6;
+//
+//    @include breakpoint(medium) {
+//      margin-top: $spacer*12;
+//    }
+//  }
+//}
+//
+//.neon-personnalise,
+//.mon-neon-personnalise {
+//  main {
+//    margin-top: $spacer*4 !important;
+//
+//    @include breakpoint(medium) {
+//      margin-top: $spacer*8 !important;
+//    }
+//  }
+//}
+
+body.page {
+  padding-top: 0;
+
+  main {
+    @include container("normal");
+  }
+}
+
+//body.panier {
+//  .wrap {
+//    main {
+//      margin-top: 0 !important;
+//    }
+//  }
+//}

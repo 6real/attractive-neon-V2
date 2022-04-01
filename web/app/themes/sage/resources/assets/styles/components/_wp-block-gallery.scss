@@ -1,0 +1,35 @@
+.wp-block-gallery {
+
+  &.is-style-slider {
+    position: relative;
+
+    .blocks-gallery-grid {
+
+      flex-wrap: nowrap;
+      min-width: 100%;
+      width: auto;
+      overflow-x: scroll;
+      margin-right: -150px;
+      margin-left: -150px;
+      padding-left: 150px;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .blocks-gallery-item {
+        min-width: 264px;
+      }
+    }
+  }
+
+  .blocks-gallery-grid {
+    @apply grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 #{!important};
+
+    .blocks-gallery-item{
+      @apply group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden #{!important};
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.media-reassurance {
+  @apply flex flex-col mt-8;
+
+  @include breakpoint(medium) {
+    @apply flex-row mt-8;
+  }
+
+  &-archive {
+    @include container(wide);
+    @apply mt-8;
+  }
+
+  &-col {
+    @apply flex flex-col justify-center relative p-12 z-10 box-border;
+
+    &:first-of-type {
+      @apply bg-white;
+      h3, p {
+        @apply text-dark;
+      }
+    }
+
+    &:last-of-type {
+      @apply bg-dark ;
+      h3, p {
+        @apply text-white;
+      }
+    }
+
+
+    @include breakpoint(medium) {
+      @apply relative p-12 w-1/3;
+    }
+  }
+
+  &-content {
+    @apply relative mt-8 text-center;
+
+    img {
+      @apply block mx-auto;
+    }
+
+    h3 {
+      @apply text-lg font-bold my-4;
+    }
+  }
+
+  &-media {
+    @apply -mt-32 -mb-32 relative z-0;
+
+    @include breakpoint(medium) {
+      @apply min-h-full w-1/3 m-0 object-cover;
+    }
+  }
+}

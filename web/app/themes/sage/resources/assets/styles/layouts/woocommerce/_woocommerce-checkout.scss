@@ -1,0 +1,42 @@
+
+form[name="checkout"] {
+  h3 {
+    @apply text-3xl font-extrabold tracking-tight text-gray-900 my-4;
+  }
+
+  .woocommerce-billing-fields__field-wrapper, .woocommerce-checkout-review-order {
+    @apply font-primary #{!important};
+    label {
+      @apply font-primary #{!important};
+    }
+  }
+
+
+  #ship-to-different-address {
+    @apply hidden;
+  }
+
+  .woocommerce-additional-fields, #mailpoet_woocommerce_checkout_optin_present_field {
+    @apply hidden;
+  }
+
+  input[type="checkbox"] {
+    @apply inline-block w-4 #{!important};
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"] {
+    @apply h-10 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md;
+  }
+
+  .woocommerce-form__label-for-checkbox, .woocommerce-privacy-policy-text > p {
+    @apply text-xs;
+
+    a {
+      @apply text-xs;
+    }
+  }
+}
+
+.woocommerce-form-coupon-toggle {
+  @apply hidden;
+}

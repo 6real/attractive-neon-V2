@@ -1,1 +1,14 @@
-// Global styles are set in the Tailwind config using a plugin
+$spacer: 0.625rem;
+
+body,
+html {
+  z-index: 1;
+  margin: 0;
+  background: $grey-bk;
+  overflow-x: hidden;
+  @apply box-border;
+}
+
+img {
+  border-style: none;
+}

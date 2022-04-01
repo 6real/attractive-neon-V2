@@ -1,0 +1,34 @@
+.wc-block-grid__products {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .wc-block-grid__product {
+    margin: 0 0 $spacer*2 0 !important;
+    padding: 0 !important;
+    background: $pink;
+    display: block;
+    max-width: 45% !important;
+    border: 2px solid $pink;
+
+    @include breakpoint(medium) {
+      max-width: 264px !important;
+    }
+
+    &-link {
+      text-decoration: none;
+    }
+
+    &-title {
+      @include Montserrat;
+
+      padding-left: $spacer;
+      text-align: left;
+      font-weight: 500;
+      font-size: 20px;
+      color: $grey-light;
+      text-decoration: none;
+      border: 0;
+    }
+  }
+}

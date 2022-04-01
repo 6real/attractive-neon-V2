@@ -1,0 +1,154 @@
+.wpforms-container {
+  &.is-style-attractive {
+    @include Montserrat;
+
+    max-width: 80%;
+
+    @include breakpoint(medium) {
+      max-width: 66%;
+    }
+
+    .wpforms-form {
+      .wpforms-field {
+        margin-bottom: $spacer;
+      }
+
+      .wpforms-field-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .wpforms-field-label {
+        @include Poppins;
+
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 300 !important;
+        margin-bottom: $spacer/2;
+      }
+
+      .wpforms-field-row.wpforms-field-medium {
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+          flex-direction: row;
+        }
+
+        .wpforms-field-row-block {
+          width: 100%;
+          margin-left: 0;
+          margin-top: $spacer;
+
+          &:first-of-type {
+            margin-top: 0;
+
+            @include breakpoint(medium) {
+              margin-top: $spacer;
+              margin-right: $spacer;
+            }
+          }
+
+          input {
+            height: 50px;
+            border-radius: 3px;
+            border-color: $pink;
+          }
+        }
+      }
+
+      .wpforms-field-select {
+        @include breakpoint(medium) {
+          width: 45%;
+        }
+
+        select {
+          max-width: 300px !important;
+          height: 50px;
+          border-radius: 3px;
+          border-color: $pink;
+        }
+      }
+
+      .wpforms-field-name {
+        width: 100%;
+      }
+
+      .wpforms-field-phone {
+        @include breakpoint(medium) {
+          width: 45%;
+        }
+      }
+
+      .wpforms-field-email {
+        width: 100%;
+
+        input[type="email"] {
+          height: 50px;
+          border-radius: 3px;
+          border-color: $pink;
+        }
+      }
+
+      .wpforms-field-textarea {
+        @include breakpoint(medium) {
+          width: 100%;
+        }
+
+        textarea {
+          height: 100px;
+          border-radius: 3px;
+          border-color: $pink;
+
+          @include breakpoint(medium) {
+            max-width: 80%;
+          }
+        }
+      }
+
+      .wpforms-field-checkbox {
+        label {
+          font-size: 16px;
+          text-transform: unset;
+        }
+      }
+
+      .wpforms-submit {
+        &.is-style-outline {
+          border: 2px solid $pink;
+          background: $grey-dark;
+          color: $white;
+          padding-left: $spacer*2;
+          padding-right: $spacer*2;
+
+          @include Montserrat;
+        }
+      }
+    }
+
+    .wpforms-confirmation-container-full {
+      background: $pink;
+      color: $white;
+      border-radius: 4px;
+      border-color: $grey-dark;
+      padding-top: $spacer*2;
+      padding-bottom: $spacer*2;
+
+      @include shadowCard;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    button[type="submit"] {
+      @include Poppins;
+
+      width: 250px;
+      height: 50px;
+      background: $pink !important;
+      color: $white !important;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.wc-block-product-categories {
+  .wc-block-product-categories-list--depth-0 {
+    display: flex;
+    padding: 0;
+    color: $white;
+    flex-direction: column;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    > li {
+      //width: auto;
+      margin-top: $spacer;
+
+      @include breakpoint(medium) {
+        margin-top: 0;
+      }
+
+      .wc-block-product-categories-list-item-count {
+        color: $pink;
+        position: relative;
+      }
+    }
+
+    > .wc-block-product-categories-list-item {
+      padding: $spacer*2;
+      background: $grey-dark;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      /*
+        TODO: Delete after add product
+       */
+      &:first-of-type {
+        display: none;
+      }
+    }
+
+    li {
+      list-style-type: none;
+
+      a {
+        color: $white;
+        font-size: 22px;
+        line-height: 22px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .wc-block-product-categories-list--depth-1 {
+    li {
+      margin: 20px 0 !important;
+      padding: 0 !important;
+      width: 100%;
+
+      .wc-block-product-categories-list-item-count {
+        color: $pink;
+        position: relative;
+      }
+
+      a {
+        font-size: 16px !important;
+        line-height: 16px;
+        position: relative;
+        z-index: 1;
+
+        @include puce;
+      }
+    }
+
+    .see-more {
+      background: transparent;
+      color: $pink;
+      border: 0;
+      text-decoration: underline;
+      font-size: 16px;
+      text-align: left;
+      margin-top: $spacer;
+      padding: 0;
+      outline: none;
+      //transform: translateX(-$spacer*2.4);
+    }
+  }
+}

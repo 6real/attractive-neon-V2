@@ -1,0 +1,22 @@
+.woocommerce {
+  &-cart {
+    @apply font-primary;
+
+    h2 {
+     @apply text-xl font-bold text-gray-900 mb-6;
+    }
+  }
+
+  #payment {
+    background-color: transparent;
+  }
+
+  .wc-proceed-to-checkout a.checkout-button {
+    @apply h-12 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover;
+
+  }
+
+  .woocommerce-checkout #payment {
+    background: transparent;
+  }
+}

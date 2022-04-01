@@ -1,0 +1,39 @@
+//.wc_tabs-shipping {
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//  flex-direction: column;
+//
+//  @include breakpoint(medium) {
+//    flex-direction: row;
+//  }
+//
+//  h2 {
+//    min-width: 100%;
+//  }
+//
+//  div {
+//    @include breakpoint(medium) {
+//      max-width: calc(100% / 3.3);
+//    }
+//
+//    h3 {
+//      text-transform: uppercase;
+//      font-weight: 200;
+//      color: $pink;
+//      display: flex;
+//      align-items: center;
+//      justify-content: flex-start;
+//
+//      i {
+//        font-size: 2rem;
+//        margin-right: $spacer;
+//      }
+//    }
+//
+//    ul {
+//      padding-left: $spacer;
+//      list-style-type: decimal;
+//    }
+//  }
+//}

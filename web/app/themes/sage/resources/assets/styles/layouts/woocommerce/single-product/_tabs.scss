@@ -1,0 +1,25 @@
+.tabs_product {
+  @apply pb-4;
+
+  p {
+    @apply text-sm;
+  }
+
+  ol {
+    list-style-type: decimal;
+    @apply pl-4 mt-4 mb-2;
+  }
+
+  ul {
+    list-style-type: circle;
+    @apply pl-4 mt-4 mb-2;
+  }
+
+  li {
+    @apply pl-4 text-sm mt-2;
+
+    &::marker {
+      @apply text-primary font-bold;
+    }
+  }
+}

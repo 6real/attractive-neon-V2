@@ -1,0 +1,83 @@
+.product > .woocommerce-tabs.wc-tabs-wrapper {
+  padding-top: $spacer;
+
+  .tabs.wc-tabs {
+    padding: 0;
+    margin: 0;
+
+    li {
+      border: 0;
+      border-bottom: 2px solid $pink;
+      padding: 0;
+      border-radius: 0;
+      margin-right: $spacer;
+
+      a {
+        @include Poppins;
+
+        font-weight: 600;
+        color: $grey-dark;
+        border-radius: 0;
+        transition: 0.2s;
+        margin: 0;
+        padding: $spacer/2 $spacer;
+        //margin: 0 $spacer $spacer;
+        margin-top: $spacer;
+
+        @include breakpoint(medium) {
+          padding: $spacer $spacer*2;
+        }
+      }
+
+      &:hover {
+        a {
+          color: $white;
+          background: rgba($pink, 0.5);
+        }
+      }
+
+      &.active {
+        border-bottom: 2px solid $pink;
+        background: none;
+
+        a {
+          color: $white;
+          background: $pink;
+        }
+
+        &:hover {
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      &::before,
+      &::after {
+        border: 0;
+        border-radius: 0;
+        content: none;
+      }
+    }
+
+    &::before {
+      border: none;
+    }
+  }
+
+  .woocommerce-Tabs-panel {
+    h2 {
+      @include Poppins;
+
+      font-weight: 600;
+      color: $white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-size: 40px;
+      margin: $spacer*2 0;
+
+      @include breakpoint(medium) {
+        font-size: 45px;
+      }
+    }
+  }
+}

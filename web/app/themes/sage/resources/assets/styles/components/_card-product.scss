@@ -1,0 +1,63 @@
+.woocommerce ul li.product.type-product.cardProduct {
+  background: $grey-light;
+  padding: 0 0 8px;
+  -webkit-box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: $spacer*6;
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-tags {
+    @include Montserrat;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    border-radius: 10px;
+    background: $pink;
+    color: $white;
+    padding: 3px 7px;
+    display: inline-block;
+    margin: $spacer;
+  }
+
+  .woocommerce-loop-product {
+    &__title {
+      @include Montserrat;
+
+      font-size: 20px;
+      font-weight: 500;
+      color: $grey-medium;
+      margin-left: $spacer;
+      margin-top: $spacer;
+    }
+  }
+
+  .price {
+    color: $pink;
+    margin-bottom: $spacer;
+    margin-left: $spacer;
+  }
+
+  .product_link {
+    @include Poppins;
+
+    background: $pink;
+    color: $white;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 600;
+    padding: $spacer 0;
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.05);
+  }
+}

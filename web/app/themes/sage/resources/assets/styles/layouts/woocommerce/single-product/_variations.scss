@@ -1,0 +1,19 @@
+.woocommerce div.product form.cart .variations {
+  @apply mt-4;
+
+  tbody {
+    tr {
+      @apply mt-2;
+    }
+
+    td.label {
+      @apply block mt-6 text-sm text-dark font-normal #{!important};
+    }
+
+    td.value {
+      select {
+        @apply text-sm mt-4 text-dark font-normal border border-primary-hover rounded #{!important};
+      }
+    }
+  }
+}

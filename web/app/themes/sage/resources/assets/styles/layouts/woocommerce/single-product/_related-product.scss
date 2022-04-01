@@ -1,0 +1,7 @@
+.related.products {
+  margin-top: $spacer*8;
+
+  > h2 {
+   @apply text-2xl font-bold tracking-tight text-dark text-center mb-4;
+  }
+}

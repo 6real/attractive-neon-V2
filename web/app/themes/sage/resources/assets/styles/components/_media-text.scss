@@ -1,0 +1,19 @@
+.wp-block-media-text {
+  h2,
+  h3,
+  h4 {
+    @include Montserrat;
+    @apply mt-6 lg:mt-0;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: bold;
+  }
+
+  &__media {
+    border-left: 7px solid $pink;
+
+    img {
+      height: 100%;
+    }
+  }
+}

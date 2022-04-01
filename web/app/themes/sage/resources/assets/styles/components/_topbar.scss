@@ -1,0 +1,37 @@
+.topBar {
+  @include container("full");
+
+  display: none;
+  position: fixed;
+  top: 87px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: $grey-dark;
+  transition: top 0.4s;
+
+  @include breakpoint(medium) {
+    display: flex;
+  }
+
+  &-item {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid $pink;
+    justify-content: center;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    p {
+      margin-left: $spacer;
+      color: $white;
+    }
+  }
+
+  &.removed {
+    top: 0;
+  }
+}

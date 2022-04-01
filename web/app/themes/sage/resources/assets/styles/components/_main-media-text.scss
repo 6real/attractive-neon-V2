@@ -1,0 +1,27 @@
+.main-media-text {
+  @include container("full");
+  @apply py-32 px-0;
+
+  overflow: hidden;
+  color: $white;
+
+  img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+    object-position: right;
+    width: 100%;
+    height: 100%;
+  }
+
+  h1,
+  p,
+  div {
+    @apply text-white mx-4;
+
+    @include breakpoint(medium) {
+      @include container("normal");
+    }
+  }
+}

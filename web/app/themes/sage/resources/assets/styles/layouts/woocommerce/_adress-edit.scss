@@ -1,0 +1,26 @@
+.woocommerce-address-fields {
+  @apply mt-4 ml-6;
+
+  label{
+    @apply block text-sm font-medium text-dark;
+  }
+
+  input, select {
+    @apply mt-1 block w-full rounded-md shadow-sm text-dark sm:text-sm focus:ring-primary-hover focus:border-primary-hover;
+  }
+
+  .select2-selection {
+    @apply h-10 pt-1;
+  }
+
+  button[type="submit"] {
+    @apply mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary #{!important};
+  }
+}
+.content {
+  form{
+    h3{
+      @apply block text-xl ml-6;
+    }
+  }
+}

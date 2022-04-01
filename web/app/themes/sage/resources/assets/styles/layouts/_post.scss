@@ -1,0 +1,61 @@
+body.single-post {
+  .content {
+    margin-top: $spacer*10;
+
+    @include breakpoint(medium) {
+      @include container("wide");
+    }
+  }
+
+  article {
+    header {
+      color: $grey-dark;
+      text-align: center;
+      padding: $spacer*2 $spacer;
+      border-radius: 5px;
+
+      h1 {
+        @include Montserrat;
+
+        text-transform: uppercase;
+        margin-top: 0;
+        font-weight: 800;
+        text-shadow: 0 0 10px rgba($grey-dark, 0.6);
+        font-size: 40px;
+        margin-bottom: $spacer;
+      }
+
+      time {
+        @include Poppins;
+
+        color: $grey-dark;
+        border-bottom: 1px solid $pink;
+      }
+    }
+  }
+
+  .entry-content {
+    background: $grey-light;
+    border-radius: 5px;
+    padding: $spacer*4 $spacer*4;
+
+    figure.thumbnail {
+      display: block;
+      height: 250px;
+      overflow: hidden;
+      margin-left: -4rem;
+      margin-right: -4rem;
+      margin-top: -4rem;
+
+      img {
+        position: relative;
+        width: 100%;
+        transform: translateY(-20%);
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+}

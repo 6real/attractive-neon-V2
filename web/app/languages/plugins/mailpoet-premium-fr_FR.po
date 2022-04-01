@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-25 08:22:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: MailPoet - MailPoet Premium\n"
+
+#: views/segments/dynamic.html:5
+msgctxt "Dynamic segment creation: The user can see logical operator between condition when has more than one"
+msgid "or"
+msgstr "ou"
+
+#: views/segments/dynamic.html:4
+msgctxt "Dynamic segment creation: The user can see logical operator between condition when has more than one"
+msgid "and"
+msgstr "et"
+
+#: views/segments/dynamic.html:3
+msgctxt "Dynamic segment creation: The user can select join between condition when he has more than one"
+msgid "<strong>Any</strong> of the following conditions"
+msgstr "<strong>L’une</strong> des conditions suivantes"
+
+#: views/segments/dynamic.html:2
+msgctxt "Dynamic segment creation: The user can select join between condition when he has more than one"
+msgid "<strong>All</strong> of the following conditions"
+msgstr "<strong>Toutes</strong> les conditions suivantes"
+
+#: views/newsletters/campaign_stats.html:27
+msgctxt "Subscriber status - subscriber bounced (w.wiki/45Qc) from a newsletter"
+msgid "Bounced"
+msgstr "Retourné·e"
+
+#: views/newsletters/campaign_stats.html:19
+msgctxt "A notice, when no bounces (w.wiki/45Qc) exist for an email."
+msgid "No bounces found"
+msgstr "Aucun rebond trouvé"
+
+#: views/newsletters/campaign_stats.html:24
+msgctxt "Subscriber engagement status - machine opened a newsletter"
+msgid "Machine-opened"
+msgstr "Ouvert par machine"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:371
+msgctxt "Subscriber engagement filter - shows machine-opens for a given newsletter"
+msgid "Machine-opened"
+msgstr "Ouvert par machine"
+
+#: views/subscribers/stats.html:8
+msgctxt "Prefix for order number e.g. Order #123"
+msgid "Order"
+msgstr "Ordre"
+
+#: views/newsletters/campaign_stats.html:33
+msgctxt "A fallback for an email of a deleted subscriber"
+msgid "Deleted subscriber"
+msgstr "Abonné⋅e supprimé⋅e"
+
+#: views/newsletters/campaign_stats.html:29
+msgctxt "Button label on Subscriber engagement page"
+msgid "Create Segment"
+msgstr "Créer un segment"
+
+#: views/newsletters/campaign_stats.html:28
+msgctxt "Subscriber engagement status - subscriber did not open a newsletter"
+msgid "Unopened"
+msgstr "Non ouvert"
+
+#: views/newsletters/campaign_stats.html:26
+msgctxt "Subscriber engagement status - subscriber unsubscribed from a newsletter"
+msgid "Unsubscribed"
+msgstr "Désabonnement"
+
+#: views/newsletters/campaign_stats.html:25
+msgctxt "Subscriber engagement status - subscriber clicked a newsletter link"
+msgid "Clicked"
+msgstr "Cliqué"
+
+#: views/newsletters/campaign_stats.html:23
+msgctxt "Subscriber engagement status - subscriber opened a newsletter"
+msgid "Opened"
+msgstr "Ouvert"
+
+#: views/newsletters/campaign_stats.html:13
+msgctxt "For example: \"Total net revenue £25.32\""
+msgid "Total net revenue %1s"
+msgstr "Revenu total net %1s"
+
+#: views/newsletters/campaign_stats.html:12
+msgctxt "For example: \"5 products sold\""
+msgid "%1s products sold"
+msgstr "%1s produits vendus"
+
+#: views/newsletters/campaign_stats.html:7
+msgctxt "For example: \"£451 from 3 orders\""
+msgid "%1s from %2s orders"
+msgstr "%1s depuis %2s commandes"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:396
+msgctxt "Subscriber engagement filter - filter those who did not open a newsletter"
+msgid "Unopened"
+msgstr "Non ouvert"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:385
+msgctxt "Subscriber engagement filter - filter those who performed any action (e.g., clicked, opened, unsubscribed)"
+msgid "All engaged"
+msgstr "Tous les engagés"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:376
+msgctxt "Subscriber engagement filter - filter those who unsubscribed from a newsletter"
+msgid "Unsubscribed"
+msgstr "Désabonné"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:366
+msgctxt "Subscriber engagement filter - filter those who opened a newsletter"
+msgid "Opened"
+msgstr "Ouvert"
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:361
+msgctxt "Subscriber engagement filter - filter those who clicked on a newsletter link"
+msgid "Clicked"
+msgstr "Cliqué"
+
+#: views/subscribers/stats.html:7
+msgid "No stats"
+msgstr "Aucune statistique"
+
+#: views/subscribers/stats.html:6
+msgid "Loading stats"
+msgstr "Chargement des statistiques"
+
+#: views/newsletters/campaign_stats.html:32
+msgid "Segment already exists."
+msgstr "Le segment existe déjà."
+
+#: views/newsletters/campaign_stats.html:31
+msgid "Segment \"%s\" created. [link]Create and send an email to it.[/link]"
+msgstr "Le segment « %s » a été crée. [link]Créer un e-mail et lui envoyer[/link]"
+
+#: views/newsletters/campaign_stats.html:30
+msgid "Saving..."
+msgstr "Enregistrement..."
+
+#: views/newsletters/campaign_stats.html:22
+msgid "Date and time"
+msgstr "Date et heure"
+
+#: views/newsletters/campaign_stats.html:21
+msgid "Status"
+msgstr "État"
+
+#: views/newsletters/campaign_stats.html:20
+msgid "Subscriber"
+msgstr "Abonné·e"
+
+#: views/newsletters/campaign_stats.html:18
+msgid "No engagement data found"
+msgstr "Aucune donnée d’engagement trouvée"
+
+#: views/newsletters/campaign_stats.html:17
+msgid "Loading data..."
+msgstr "Chargement des données..."
+
+#: views/newsletters/campaign_stats.html:16
+msgid "Unique clicks"
+msgstr "Clic unique"
+
+#: views/newsletters/campaign_stats.html:15
+msgid "Link"
+msgstr "Lien"
+
+#: views/newsletters/campaign_stats.html:14
+msgid "No clicked links found"
+msgstr "Aucun lien cliqué trouvé"
+
+#: views/newsletters/campaign_stats.html:11
+msgid "Or, if you haven’t tried out the products widget yet, [link]here’s how to get started[/link]."
+msgstr "Ou, si vous n'avez pas encore essayé le widget des produits, [link]voici comment commencer[/link]."
+
+#: views/newsletters/campaign_stats.html:10
+msgid "For best practice tips, check out our [link]guide to WooCommerce follow up emails[/link]."
+msgstr "Pour des conseils sur les meilleures pratiques, consultez notre [link]guide sur les e-mails de suivi de WooCommerce[/link]."
+
+#: views/newsletters/campaign_stats.html:9
+msgid "Unfortunately, no products were sold as a result of this email!"
+msgstr "Malheureusement, aucun produit n'a été vendu à la suite de cet e-mail !"
+
+#: views/newsletters/campaign_stats.html:8
+msgid "Products Sold"
+msgstr "Produits vendus"
+
+#: views/newsletters/campaign_stats.html:6
+msgid "Revenues generated by customers who made a purchase within two weeks after they clicked on this email. This is the sum of the order totals including shipping and taxes."
+msgstr "Revenus générés par les clients qui ont fait un achat dans les deux semaines après avoir cliqué sur cet e-mail. Ceci est la somme du total des commandes avec l’expédition et la TVA incluses."
+
+#: mailpoet_initializer.php:88
+msgid "Your MailPoet Premium plugin is incompatible with the free MailPoet plugin. [link1]Register[/link1] your key or [link2]purchase one now[/link2] to update the Premium to the latest version."
+msgstr "Votre extension MailPoet Premium est incompatible avec l’extension gratuite MailPoet. [link1]Enregistrez[/link1] votre clé ou [link2]achetez en une[/link2] pour mettre à jour l’extension dans sa dernière version."
+
+#: mailpoet_initializer.php:86
+msgid "You have an older version of the Premium plugin. The features have been disabled in order not to break MailPoet. Please update it in the Plugins page now."
+msgstr "Vous utilisez une ancienne version de l’extension MailPoet Premium. Ces fonctionnalités ont été désactivées pour ne pas casser MailPoet. Veuillez faire la mise à jour dans la page des extensions."
+
+#: mailpoet_initializer.php:75
+msgid "You need to have MailPoet version %s or higher activated before using this version of MailPoet Premium."
+msgstr "Vous devez d'abord activer MailPoet version %s ou plus récent pour utiliser cette version de MailPoet Premium."
+
+#: mailpoet-premium.php:67
+msgid "MailPoet Premium cannot start because it is missing core files. Please reinstall the plugin."
+msgstr "MailPoet Premium ne peut pas démarrer car des fichiers du core sont manquants. Veuillez réinstaller l’extension."
+
+#: mailpoet-premium.php:51
+msgid "MailPoet Premium requires PHP version 7.2.0 or newer (version 8.0 recommended). Please read our [link]instructions[/link] on how to resolve this issue."
+msgstr "MailPoet nécessite PHP en version 7.2.O ou supérieure (version 8.0 recommandée). Veuillez lire nos [link]instructions[/link] sur la façon de corriger ce problème. "
+
+#: lib/Newsletter/Stats/SubscriberEngagement.php:329
+msgid "Filter by link clicked"
+msgstr "Filtrer par lien cliqué"
+
+#: lib/Config/Renderer.php:107
+msgid "Failed to render template \"%s\". Please ensure the template cache folder \"%s\" exists and has write permissions. Terminated with error: \"%s\""
+msgstr "Erreur de rendu du modèle « %s ». Veuillez vous assurer que le répertoire de cache du modèle « %s » existe et que des permissions d’écriture lui sont accordées. Terminé avec l’erreur : « %s »"
+
+#: lib/Config/Hooks.php:40
+msgid "[link1]Register[/link1] your copy of the MailPoet Premium plugin to receive access to automatic upgrades and support. Need a license key? [link2]Purchase one now.[/link2]"
+msgstr "[link1]Enregistrez[/link1] votre copie de l’extension MailPoet Premium pour avoir accès aux mises à jour automatiques et au support. Besoin d’une clé de licence ? [link2]Achetez en une maintenant[/link2]."
+
+#: lib/API/JSON/v1/SubscriberDetailedStats.php:42
+msgid "Missing subscriber id."
+msgstr "ID d’abonné manquant."
+
+#: lib/API/JSON/v1/Bounces.php:46 lib/API/JSON/v1/Stats.php:79
+#: lib/API/JSON/v1/Stats.php:115
+msgid "This newsletter is not sent yet."
+msgstr "Cette newsletter n’est pas encore envoyée."
+
+#: lib/API/JSON/v1/Bounces.php:39 lib/API/JSON/v1/Stats.php:70
+#: lib/API/JSON/v1/Stats.php:108
+msgid "This newsletter does not exist."
+msgstr "Cette newsletter n’existe pas."
