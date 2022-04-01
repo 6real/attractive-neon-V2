@@ -6,7 +6,7 @@
             "key": "field_61cd72c63f15c",
             "label": "Icone",
             "name": "icon",
-            "type": "wysiwyg",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
-            "toolbar": "full",
-            "delay": 0
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -40,5 +45,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641314861
+    "modified": 1648810417
 }
