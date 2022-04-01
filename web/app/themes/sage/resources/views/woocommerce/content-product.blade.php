@@ -47,8 +47,8 @@
       {{$product->get_title()}}
     </h3>
 
-    <p class="mt-4 text-primary font-medium text-dark">
-      {{__('À partir de','attractive' )}} <span class="text-primary">{{$product->get_price()}} €</span>
+    <p class="mt-2 text-sm text-primary text-dark">
+      {{__('À partir de','attractive' )}} <br><span class="font-semibold text-primary">{{$product->get_price()}} €</span>
     </p>
   </a>
 </div>
