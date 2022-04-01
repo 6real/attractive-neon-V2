@@ -12,8 +12,6 @@
   }
 
   &__image {
-    @apply mr-2;
-
     &--thumbs {
       @apply flex overflow-x-scroll pb-0;
       -ms-overflow-style: none;  /* IE and Edge */
@@ -25,15 +23,14 @@
       &::-webkit-scrollbar {
         display: none;
       }
-
-    }
-
-    &:last-of-type {
-      @apply m-0;
     }
 
     img {
-      @apply rounded-lg h-28 w-28 max-w-none #{!important};
+      @apply rounded-lg h-28 w-28 max-w-none m-2 #{!important};
     }
   }
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2){
+  width: auto;
 }

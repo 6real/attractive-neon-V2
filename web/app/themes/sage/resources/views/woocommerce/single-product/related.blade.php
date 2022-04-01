@@ -15,40 +15,42 @@
  * @version     3.9.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+  exit;
 }
 
 if ( $related_products ) : ?>
-	<section class="related products">
+<section class="related products">
+  <?php
+  $heading = apply_filters('woocommerce_product_related_products_heading', __('Related products', 'woocommerce'));
 
-		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+  if ( $heading ) :
+  ?>
+  <h2><?php echo esc_html($heading); ?></h2>
+  <?php endif; ?>
 
-		if ( $heading ) :
-			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
-		<?php endif; ?>
+<!--		--><?php //woocommerce_product_loop_start(); ?>
+  <div class="-mx-px mx-auto border-l border-t border-gray-600 grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
 
-		<?php woocommerce_product_loop_start(); ?>
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+    <?php foreach ($related_products as $related_product) : ?>
 
 					<?php
-					$post_object = get_post( $related_product->get_id() );
+      $post_object = get_post($related_product->get_id());
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+      setup_postdata($GLOBALS['post'] =& $post_object); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+      wc_get_template_part('content', 'product');
+      ?>
 
 			<?php endforeach; ?>
+  </div>
 
-		<?php woocommerce_product_loop_end(); ?>
+  <!--		--><?php //woocommerce_product_loop_end(); ?>
 
-	</section>
+</section>
 
-	<?php
+<?php
 endif;
 
 wp_reset_postdata();

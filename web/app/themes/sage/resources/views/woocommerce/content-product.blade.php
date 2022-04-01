@@ -21,24 +21,34 @@
 
 @endphp
 
-<li {{wc_product_class( 'cardProduct', $product )}}>
-{{--  @if($interval_date->days < 20)--}}
-{{--    <span class="product-tags">{{__('Nouveauté', 'attractive')}}</span>--}}
-{{--  @endif--}}
-  @php
-    do_action( 'woocommerce_before_shop_loop_item' );
-    do_action( 'woocommerce_before_shop_loop_item_title' );
-    do_action( 'woocommerce_shop_loop_item_title' );
-    // do_action( 'woocommerce_after_shop_loop_item_title' );
-  @endphp
 
-  <span class="price">
-      <span class="woocommerce-Price-amount amount">
-        {{__('À partir de','attractive' )}}
-        <bdi>{{$product->get_price()}}
-          <span class="woocommerce-Price-currencySymbol">€</span>
-        </bdi>
-      </span>
-  </span>
-  <a class="product_link" href="{{get_permalink()}}">{{__('Voir le produit','attractive' )}}</a>
-</li>
+
+{{--@php--}}
+{{--  $postDate = get_the_date();--}}
+{{--  $today_date      = new DateTime( date( 'Y-m-d', strtotime( 'today' ) ) );--}}
+{{--  $registered = new DateTime(strtotime( $postDate ) );--}}
+{{--  $interval_date   = $today_date->diff( $registered );--}}
+{{--@endphp--}}
+
+<div class="group relative p-4 border-r border-b border-gray-600 sm:p-6">
+
+
+  <a href="{{$product->get_permalink()}}">
+    <div class="rounded-lg overflow-hidden bg-gray-200 aspect-w-1 aspect-h-1 group-hover:opacity-75">
+
+      @php
+        do_action( 'woocommerce_before_shop_loop_item_title' );
+      @endphp
+
+    </div>
+  </a>
+  <a href="{{$product->get_permalink()}}" class="pt-10 pb-4 text-center">
+    <h3 class="text-dark mt-4 p">
+      {{$product->get_title()}}
+    </h3>
+
+    <p class="mt-4 text-primary font-medium text-dark">
+      {{__('À partir de','attractive' )}} <span class="text-primary">{{$product->get_price()}} €</span>
+    </p>
+  </a>
+</div>
