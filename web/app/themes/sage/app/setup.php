@@ -20,6 +20,8 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('paypal', 'https://www.paypal.com/sdk/js?client-id=AdST1BYGjh0mVzAfIy1M4OlW_6U3ef5YUjHK3nGejjXvMZGqIcz7GirBk22y7XuVYNLmnxwxLHKsrUMM&currency=EUR&components=messages', '', null, false);
         wp_enqueue_script('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js', '', null, true);
         wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery', 'wp-api'], null, true);
+        wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+
     }
 
     if(WP_ENV != 'development'){

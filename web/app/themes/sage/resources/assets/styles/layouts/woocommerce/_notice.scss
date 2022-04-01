@@ -1,28 +1,14 @@
-.woocommerce-notices-wrapper {
-  @include Montserrat;
-
-  position: absolute;
-  right: 0;
-  transform: translateY(-50%);
-
-  .woocommerce-message {
-    border-color: $pink;
-
-    &::before {
-      color: $pink;
-    }
-
-    a {
-      color: $pink;
-      background: transparent;
-      font-weight: 400;
-      padding: 0;
-      margin-left: $spacer;
-      text-decoration: underline;
-    }
-  }
+.woocommerce-notices-wrapper, .woocommerce-Message {
+  @apply bg-transparent ml-auto border-primary text-primary mt-8;
 }
 
-.woocommerce-NoticeGroup {
-  @include Montserrat;
+.woocommerce-info {
+  @apply text-dark;
+  &::before {
+    @apply text-primary;
+  }
+
+  .woocommerce-Button {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary #{!important};
+  }
 }

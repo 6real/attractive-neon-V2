@@ -52,6 +52,7 @@
 @import "layouts/posts";
 @import "layouts/post";
 @import "layouts/tinymce";
+@import "layouts/parcel-panel-tracking";
 
 /** WooCommerce theme styles */
 @import "layouts/woocommerce/archive-product";
@@ -60,6 +61,8 @@
 @import "layouts/woocommerce/woocommerce-checkout";
 @import "layouts/woocommerce/account";
 @import "layouts/woocommerce/navigation";
+@import "layouts/woocommerce/adress-edit";
+@import "layouts/woocommerce/account-orders";
 @import "layouts/woocommerce/notice";
 @import "layouts/woocommerce/single-product/variations";
 @import "layouts/woocommerce/single-product/tabs";
