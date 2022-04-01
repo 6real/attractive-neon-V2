@@ -9,10 +9,9 @@ function withOpacity(variableName) {
   };
 }
 
-
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: false,
     safelist: ['w-40','h-40'],
     content: [
       './resources/views/**/*.php',
@@ -34,6 +33,7 @@ module.exports = {
       colors: {
         primary: withOpacity("--color-primary"),
         'primary-hover':'#e634ee',
+        'primary-light':'#f78ffa',
         white: withOpacity("--color-white"),
         dark: withOpacity("--color-grey-dark"),
         medium: withOpacity("--color-grey-medium"),
@@ -61,6 +61,9 @@ module.exports = {
       maxHeight: {
         '4': '2.5rem',
       },
+      scale: {
+        '400': '4',
+      }
     },
 
   },

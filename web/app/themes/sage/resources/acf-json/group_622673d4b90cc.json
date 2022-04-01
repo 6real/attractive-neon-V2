@@ -438,8 +438,8 @@
                 },
                 {
                     "key": "field_6226783e0801a",
-                    "label": "Desctription",
-                    "name": "desctription",
+                    "label": "Description",
+                    "name": "description",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -456,66 +456,19 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_622678570801b",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
+                    "key": "field_62473424665d8",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_622678700801c",
-                    "label": "Title card",
-                    "name": "title_card",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6226787c0801d",
-                    "label": "Description Card",
-                    "name": "description_card",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "100",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": ""
+                    "return_format": "array"
                 }
             ]
         },
@@ -624,5 +577,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648811194
+    "modified": 1648833705
 }
