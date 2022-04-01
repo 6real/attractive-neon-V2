@@ -11,7 +11,7 @@ function withOpacity(variableName) {
 
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     safelist: ['w-40','h-40'],
     content: [
       './resources/views/**/*.php',

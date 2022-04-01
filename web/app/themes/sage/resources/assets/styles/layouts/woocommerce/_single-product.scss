@@ -39,12 +39,7 @@ body.single.single-product {
       }
 
       input.qty {
-        //padding: $spacer/2 0;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        border-color: $pink;
-        border-width: 5px;
+        @apply w-24 h-14 rounded border-2 border-primary-hover;
 
         @include shadowCard;
       }
