@@ -3,7 +3,7 @@
   h3,
   h4 {
     @include Montserrat;
-
+    @apply mt-6 lg:mt-0;
     font-size: 32px;
     line-height: 39px;
     font-weight: bold;
