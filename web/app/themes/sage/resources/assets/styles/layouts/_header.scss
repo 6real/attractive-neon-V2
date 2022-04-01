@@ -1,5 +1,5 @@
 header {
-  img {
+  .logo > img {
     @apply h-8 w-auto #{!important};
 
     @include breakpoint(medium) {

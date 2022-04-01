@@ -31,7 +31,7 @@ class Walker_Primary extends Walker_Nav_Menu
                           </button>';
             } else {
 
-                    $output .= '
+                $output .= '
                     <a href="' . $permalink . '" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 text-sm font-medium">
                       ' . $title . '
                     </a>';
@@ -41,12 +41,12 @@ class Walker_Primary extends Walker_Nav_Menu
 
         } elseif (!empty($permalink) && !empty($title) && $depth == 1) {
             $icon = get_field('icon', $item->ID);
-            $output .= '<a href="' . $permalink . '" class="-m-3 px-3 py-2 flex items-center rounded-lg">';
+            $output .= '<a href="' . $permalink . '" class="-m-3 px-3 py-3 flex items-center rounded-lg">';
 
             if (!empty($icon)) {
-                $output .= '<img class="h-6 w-6" src="'.$icon['url'].'" alt="'.$icon['url'].'">' ;
+                $output .= '<img class="h-10 w-10" src="' . $icon['url'] . '" alt="' . $icon['url'] . '">';
             } else {
-                $output .= '<svg class="flex-shrink-0 h-6 w-6 text-primary-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                $output .= '<svg class="flex-shrink-0 h-10 w-10 text-primary-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>';
             }
@@ -119,15 +119,16 @@ class Walker_Primary_Mobile extends Walker_Nav_Menu
         $permalink = $item->url;
         if (!empty($permalink) && !empty($title) && $depth == 0) {
             $dispo = get_field('no_dispo', $item->ID);
+            $icon = get_field('icon', $item->ID);
+
             if ($dispo == false) {
-                $output .= '
-                <a href="' . $permalink . '" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                    <svg class="flex-shrink-0 h-6 w-6 text-primary-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                    <span class="ml-3 text-base font-medium text-gray-900">
-                    ' . $title . '
-                    </span>
+                $output .= '<a href="' . $permalink . '" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">';
+
+                if (!empty($icon)) {
+                    $output .= ' <img class="h-8 w-8" src="' . $icon["url"] . '" alt="' . $icon['alt'] . '">';
+                }
+
+                $output .= '<span class="ml-3 text-base font-medium text-gray-900">' . $title . '</span>
                 </a>';
             } else {
                 $output .= '

@@ -1,5 +1,5 @@
 footer {
-  @apply bg-dark mt-4 py-2 md:py-8;
+  @apply bg-dark mt-4 px-6 py-12 md:py-8;
 
   .container {
     @apply relative flex flex-wrap justify-between;
@@ -45,8 +45,12 @@ footer {
       }
 
       &.widget_media_image:first-of-type {
-        position: absolute;
-        margin-top: 0;
+        @apply relative mb-6;
+        @include breakpoint(medium) {
+          position: absolute;
+          margin-top: 0;
+          margin-bottom: 30px;
+        }
       }
 
       h3 {

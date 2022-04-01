@@ -9,7 +9,7 @@
       {{--      LOGO      --}}
       <div class="relative z-10 px-2 flex lg:px-0">
         <div class="flex-shrink-0 flex items-center">
-          <a href="{{home_url()}}">
+          <a class="logo" href="{{home_url()}}">
             <img class="hidden lg:block h-8 w-auto"
                  src="@php esc_attr_e(get_field('logo_full', 'option')['url']);  @endphp" alt="Attractive Neon Logo">
             <img class="lg:hidden block h-12 w-auto"
