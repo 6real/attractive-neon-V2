@@ -47,7 +47,8 @@
 
   @php do_action('woocommerce_after_main_content'); @endphp
 
-  @include('woocommerce.blocks.banner-archive')
   @include('partials.block-marketing-archive')
+  @include('woocommerce.blocks.banner-archive')
+
 
 @endsection

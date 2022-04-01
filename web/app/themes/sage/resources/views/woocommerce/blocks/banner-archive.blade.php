@@ -1,12 +1,9 @@
-@php
-  $content = get_field('before_footer', 'option');
-
-@endphp
-
 @if(is_product_category())
   @php
     $current_category = get_queried_object();
     $category_id = $current_category->term_id;
+    $taxonomy = $current_category->taxonomy;
+    $content = get_field('before_footer', $taxonomy . '_' .$category_id);
     $category_name = $current_category->name;
        $args = array(
           'post_type'             => 'product',
@@ -28,7 +25,8 @@
 
 @if(!empty($content))
 
-  <div class="w-full flex flex-col lg:flex-row items-center my-12 p-8 overflow-hidden rounded-xl bg-gradient-to-r from-primary to-dark">
+  <div
+    class="w-full flex flex-col lg:flex-row items-center my-12 p-8 overflow-hidden rounded-xl bg-gradient-to-r from-primary to-dark shadow-xl">
     <div class="relative z-10 w-full px-6 mb-40 lg:mb-0">
       <h3 class="text-white font-medium text-2xl">{{$content['title']}}</h3>
       <p class="text-white mt-2">{{$content['description']}}</p>
@@ -38,7 +36,8 @@
     </div>
 
 
-    <div class="w-1/2 grid grid-cols-3 gap-1 lg:gap-4 px-6 transform origin-center -rotate-6 translate-x-5 lg:translate-x-10 scale-400 md:scale-125 relative z-0">
+    <div
+      class="w-1/2 grid grid-cols-3 gap-1 lg:gap-4 px-6 transform origin-center -rotate-6 translate-x-5 lg:translate-x-10 scale-400 md:scale-125 relative z-0">
       @foreach($products->posts as $index => $product)
         @php
           $product_wc   = wc_get_product( $product->ID );
