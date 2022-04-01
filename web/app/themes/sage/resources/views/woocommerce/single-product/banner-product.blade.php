@@ -1,7 +1,7 @@
 @php
-  $content = get_field('product_banner', 'option');
+  $term = get_the_terms(get_the_ID(), 'product_cat')[0]->term_id;
+    $content = get_field('product_banner', 'product_cat_'.$term);
 @endphp
-
 <div class="w-full mx-auto py-16 sm:py-24">
   <div class="relative rounded-lg overflow-hidden">
     <div class="absolute inset-0">
