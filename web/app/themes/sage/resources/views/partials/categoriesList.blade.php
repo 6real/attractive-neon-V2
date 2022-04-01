@@ -33,15 +33,17 @@
     @endforeach
   </ul>
 @else
-  <div class="bg-dark sm:rounded-lg flex flex-col justify-center mr-auto">
+  @php $contact = get_field('contact', 'option');@endphp
+
+  <div class="bg-dark rounded flex flex-col justify-center mr-auto">
 
     <div class="px-4 py-5 sm:p-6">
-      <h3 class="text-lg leading-6 font-medium text-white">Vous ne trouvez pas le néon parfait ?</h3>
+      <h3 class="text-lg leading-6 font-medium text-white">{{$contact['title']}}</h3>
       <div class="mt-2 max-w-xl text-sm">
-        <p class="text-white">Contactez nous pour créer le néon personnalisé qui conviens exactement vos besoin</p>
+        <p class="text-white">{{$contact['content']}}</p>
       </div>
       <div class="mt-5">
-        <button type="button" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-white bg-primary hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">Je contacte un designer</button>
+        <a href="{{$contact['link']['url']}}" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-white bg-primary hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">{{$contact['link']['title']}}</a>
       </div>
     </div>
   </div>
