@@ -1,0 +1,5 @@
+.banner-product {
+  img {
+    @apply w-full max-w-none h-full object-center object-cover #{!important};
+  }
+}

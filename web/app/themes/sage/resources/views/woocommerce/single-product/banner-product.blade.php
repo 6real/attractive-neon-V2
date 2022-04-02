@@ -4,11 +4,11 @@
 @endphp
 @if(!empty($content))
 
-<div class="w-full mx-auto py-16 sm:py-24">
+<div class="banner-product w-full mx-auto py-16 sm:py-24">
   <div class="relative rounded-lg overflow-hidden">
     <div class="absolute inset-0">
       <img src="{{$content['image']['url']}}" alt="{{$content['image']['alt']}}"
-           class="w-full h-full object-center object-cover">
+           class="w-full max-w-none h-full object-center object-cover">
     </div>
     <div class="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
       <div class="relative max-w-3xl mx-auto flex flex-col items-center text-center">
