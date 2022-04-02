@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 function withOpacity(variableName) {
-  return ({ opacityValue }) => {
+  return ({opacityValue}) => {
     if (opacityValue !== undefined) {
       return `rgba(var(${variableName}), ${opacityValue})`;
     }
@@ -12,7 +12,7 @@ function withOpacity(variableName) {
 module.exports = {
   purge: {
     enabled: true,
-    safelist: ['w-40','h-40'],
+    safelist: ['w-40', 'h-40'],
     content: [
       './resources/views/**/*.php',
       './resources/views/*.php',
@@ -21,19 +21,19 @@ module.exports = {
       './resources/views/woocommerce/**/*.php',
       './resources/views/**/**/*.php',
       './resources/views/**/**/**/*.php',
-      './app/*.php' ],
+      './app/*.php'],
   },
   theme: {
     important: true,
     extend: {
-      fontFamily:{
-        primary:['Montserrat', "sans-serif"],
-        secondary:['Poppins', "sans-serif"]
+      fontFamily: {
+        primary: ['Montserrat', "sans-serif"],
+        secondary: ['Poppins', "sans-serif"]
       },
       colors: {
         primary: withOpacity("--color-primary"),
-        'primary-hover':'#e634ee',
-        'primary-light':'#f78ffa',
+        'primary-hover': '#e634ee',
+        'primary-light': '#f78ffa',
         white: withOpacity("--color-white"),
         dark: withOpacity("--color-grey-dark"),
         medium: withOpacity("--color-grey-medium"),
@@ -60,6 +60,9 @@ module.exports = {
       },
       maxHeight: {
         '4': '2.5rem',
+      },
+      minHeight: {
+        '24': '15rem',
       },
       scale: {
         '400': '4',
