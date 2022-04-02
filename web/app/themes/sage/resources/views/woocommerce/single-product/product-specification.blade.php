@@ -1,8 +1,6 @@
 @php
-  $content = get_field('technical_specification', 'option');
-$product = wc_get_product( get_the_ID() );
-
-{{--$title = str_replace(' - Néon LED', '', $product->get_title());--}}
+    $content = get_field('technical_specification', 'option');
+    $product = wc_get_product( get_the_ID() );
 @endphp
 
 <section aria-labelledby="features-heading" class="max-w-7xl mx-auto sm:px-2">
