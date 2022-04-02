@@ -7,11 +7,14 @@
  */
 class Walker_Primary extends Walker_Nav_Menu
 {
+    private $curItem;
+
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
         $object = $item->object;
         $title = $item->title;
         $permalink = $item->url;
+        $this->curItem = $item;
 
         if (!empty($permalink) && !empty($title) && $depth == 0) {
             if ($args->walker->has_children) {
@@ -93,7 +96,18 @@ class Walker_Primary extends Walker_Nav_Menu
                             class="absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
 
                               <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div class="relative grid gap-2 bg-white px-5 py-6 sm:p-8"> ';
+                                <div class="relative grid gap-2 bg-white px-5 py-6 sm:p-8">
+
+                                     <a href="' . $this->curItem->url . '" class=" flex">
+                                         <span class="flex justify-center items-center">
+                                            <svg class="w-2" viewBox="0 0 139 208"
+                                                 style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path d="M138.36,103.97l-80.53,103.98l-57.83,0l0,-207.95l57.83,0l80.53,103.97Z" style="fill:#f91fff;fill-rule:nonzero;"/>
+                                            </svg>
+                                         </span>
+                                         <p class="text-primary block ml-2">   ' . $this->curItem->title . '</p>
+                                     </a>
+
+                                 ';
         }
 
     }
@@ -101,8 +115,8 @@ class Walker_Primary extends Walker_Nav_Menu
     function end_lvl(&$output, $depth = 0, $args = null)
     {
         if ($depth == 0) {
-            $output .= '</div>
 
+            $output .= '</div>
                     </div>
                 </div>';
         }
