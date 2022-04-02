@@ -3,7 +3,7 @@
     $product = wc_get_product( get_the_ID() );
 @endphp
 
-<section aria-labelledby="features-heading" class="max-w-7xl mx-auto sm:px-2">
+<section aria-labelledby="features-heading" class="max-w-7xl w-full mx-auto sm:px-2">
   <div
     x-cloak
     x-data="{ num : 0 }"
@@ -16,11 +16,11 @@
     <div class="mt-4">
       <div class="-mx-4 flex sm:mx-0">
         <div class="flex-auto px-4 sm:px-0">
-          <div class="-mb-px flex space-x-5" aria-orientation="horizontal" role="tablist">
+          <div class="-mb-px flex flex-col lg:flex-row lg:space-x-5" aria-orientation="horizontal" role="tablist">
             @foreach($content['items'] as $index => $item)
               <button @click="num = {!! $index !!}"
-                      :class="num == {!! $index !!} ? 'bg-primary' : 'bg-gray-400'"
-                      class="border-transparent px-3 lg:px-6 text-white whitespace-nowrap py-2 lg:py-3 font-medium text-md"
+                      :class="num == {!! $index !!} ? 'bg-primary text-white' : 'bg-gray-600 text-white'"
+                      class="w-full lg:w-auto border-transparent rounded px-3 lg:px-6 whitespace-nowrap py-2 lg:py-3 font-medium text-md mt-2 lg:mt-0"
                       role="tab" type="button">
                 {!! $item['menu_name'] !!}
               </button>
