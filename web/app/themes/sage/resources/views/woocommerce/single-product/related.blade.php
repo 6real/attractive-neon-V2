@@ -22,7 +22,7 @@
   if ( $related_products ) :
 
 @endphp
-<section class="related products">
+<section class="related products w-full">
   @php
     $heading = apply_filters('woocommerce_product_related_products_heading', __('Related products', 'woocommerce'));
   @endphp

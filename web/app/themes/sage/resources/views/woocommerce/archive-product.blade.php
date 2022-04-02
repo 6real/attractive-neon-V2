@@ -1,12 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-
+  @php
+    $icon = get_field('icone_categorie', 'product_cat_'.get_queried_object_id())
+  @endphp
   <header class="woocommerce-products-header">
-    @if ( apply_filters( 'woocommerce_show_page_title', true ) )
-      <h1 class="woocommerce-products-header__title page-title is-style-main"><?php woocommerce_page_title(); ?></h1>
+    @if(!empty($icon['url']))
+      <img class="block mx-auto w-24 mb-4" src="{{$icon['url']}}" alt="{{$icon['alt']}}">
     @endif
+    @if ( apply_filters( 'woocommerce_show_page_title', true ) )
 
+      <h1
+        class="woocommerce-products-header__title page-title is-style-main pb-4"><?php woocommerce_page_title(); ?></h1>
+    @endif
     @php
       do_action('woocommerce_archive_description');
       do_action( 'woocommerce_before_main_content' );
