@@ -29,7 +29,7 @@
       @foreach($categories as $category)
         @if ($loop->first)
 
-          <div class="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+          <div class="group aspect-w-3 aspect-h-2 md:aspect-w-2 md:aspect-h-1 rounded-lg overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
             <img src="{!! $category['image'] !!}"
                  alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
                  class="object-center object-cover group-hover:opacity-75">
@@ -52,7 +52,7 @@
         @else
 
 
-        <div class="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full">
+        <div class="group aspect-w-3 aspect-h-2 md:aspect-w-2 md:aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full">
           <img src="{!! $category['image'] !!}"
                alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
                class="object-center object-cover group-hover:opacity-75 sm:absolute sm:inset-0 sm:w-full sm:h-full">

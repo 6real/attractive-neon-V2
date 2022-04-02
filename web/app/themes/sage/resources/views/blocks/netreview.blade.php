@@ -9,10 +9,18 @@
   SupportsMode: true
   SupportsMultiple: true
   --}}
+<div class="lg:hidden flex justify-center mb-4">
+  <meta class=" lg:hidden netreviewsWidget" id="netreviewsWidgetNum30399"
+        data-jsurl="https://cl.avis-verifies.com/fr/cache/d/2/d/d2d16cb1-9564-7b14-2dfe-77d442100050/widget4/widget04-30399_script.js"/>
+  <script src="https://cl.avis-verifies.com/fr/widget4/widget04_FB3_nojquery.min.js"></script>
+</div>
 
 
-<section class="{{ $block['classes'] }}">
-  <iframe id='AV_widget_iframe' frameBorder="0" width="100%" height="100%"
-          src="//cl.avis-verifies.com/fr/cache/d/2/d/d2d16cb1-9564-7b14-2dfe-77d442100050/widget4/d2d16cb1-9564-7b14-2dfe-77d442100050horizontal_index.html"></iframe>
+<div class="min-h-24">
+  <iframe id='AV_widget_iframe' frameBorder="0" class="overflow-y-hidden" width="100%" height="100%"
+          src="//cl.avis-verifies.com/fr/cache/d/2/d/d2d16cb1-9564-7b14-2dfe-77d442100050/widget4/d2d16cb1-9564-7b14-2dfe-77d442100050horizontal_index.html">
 
-</section>
+  </iframe>
+</div>
+
+
