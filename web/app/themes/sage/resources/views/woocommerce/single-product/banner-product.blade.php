@@ -2,6 +2,8 @@
   $term = get_the_terms(get_the_ID(), 'product_cat')[0]->term_id;
     $content = get_field('product_banner', 'product_cat_'.$term);
 @endphp
+@if(!empty($content))
+
 <div class="w-full mx-auto py-16 sm:py-24">
   <div class="relative rounded-lg overflow-hidden">
     <div class="absolute inset-0">
@@ -14,10 +16,14 @@
           <span class="block sm:inline">{{$content['title']}}</span>
         </h2>
         <p class="mt-3 text-xl text-white">{{$content['description']}}</p>
-        <a href="{{$content['link']['url']}}"
-           class="mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
-          {{$content['link']['title']}}</a>
+        @if($content['link']['url'])
+          <a href="{{$content['link']['url']}}"
+             class="mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
+            {{$content['link']['title']}}
+          </a>
+        @endif
       </div>
     </div>
   </div>
 </div>
+@endif
