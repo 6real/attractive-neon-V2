@@ -2,7 +2,7 @@
   $content = get_field('technical_specification', 'option');
 $product = wc_get_product( get_the_ID() );
 
-$title = str_replace(' - Néon LED', '', $product->get_title());
+{{--$title = str_replace(' - Néon LED', '', $product->get_title());--}}
 @endphp
 
 <section aria-labelledby="features-heading" class="max-w-7xl mx-auto sm:px-2">
@@ -12,7 +12,7 @@ $title = str_replace(' - Néon LED', '', $product->get_title());
     class="max-w-2xl mx-auto px-4 lg:px-0 lg:max-w-none">
     <div class="max-w-3xl">
       <h2 id="features-heading"
-          class="text-2xl font-bold tracking-tight text-dark">{!! $content['title']. ' '. $title !!}</h2>
+          class="text-2xl font-bold tracking-tight text-dark">{!! $content['title'] !!}</h2>
       <p class="mt-4 text-gray-500"> {!! $content['description'] !!} </div>
 
     <div class="mt-4">
