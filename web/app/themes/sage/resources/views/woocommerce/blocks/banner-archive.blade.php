@@ -29,7 +29,7 @@
     <div class="relative z-10 w-full px-6 mb-40 lg:mb-0">
       <h3 class="text-white font-medium text-2xl">{{$content['title']}}</h3>
       <p class="text-white mt-2">{{$content['description']}}</p>
-      @if($content['link']['url'])
+      @if(!empty($content['link']['url']))
         <a class="inline-block mt-6 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-medium hover:bg-primary-light hover:text-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
            href="{{$content['link']['url']}}">{{$content['link']['title']}}
         </a>

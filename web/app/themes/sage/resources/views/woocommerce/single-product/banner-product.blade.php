@@ -16,7 +16,7 @@
           <span class="block sm:inline">{{$content['title']}}</span>
         </h2>
         <p class="mt-3 text-xl text-white">{{$content['description']}}</p>
-        @if($content['link']['url'])
+        @if(!empty($content['link']['url']))
           <a href="{{$content['link']['url']}}"
              class="mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
             {{$content['link']['title']}}
