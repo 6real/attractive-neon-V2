@@ -13,7 +13,7 @@
 @php
   $col_1 = get_field('col_1');
   $col_2 = get_field('col_2');
-  $col_3 = get_field('col_3');
+  $col_3 = get_field('col_3');wp-block-gallery
 @endphp
 
 <section class="{{ $block['classes'] }}">
