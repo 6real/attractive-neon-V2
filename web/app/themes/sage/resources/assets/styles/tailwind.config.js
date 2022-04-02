@@ -68,7 +68,6 @@ module.exports = {
         '400': '4',
       }
     },
-
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
