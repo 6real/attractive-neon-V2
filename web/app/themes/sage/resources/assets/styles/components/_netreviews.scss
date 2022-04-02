@@ -1,14 +1,3 @@
-#AV_widget_iframe {
-  .netreviews-widget {
-    overflow-y: hidden;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
-    &::-webkit-scrollbar {
-      display: none !important;
-    }
-  }
-}
-.netreviewsWidget{
+.netreviewsWidget {
   position: absolute;
 }

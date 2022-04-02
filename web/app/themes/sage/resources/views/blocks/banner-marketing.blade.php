@@ -17,22 +17,22 @@
 @endphp
 
 <section class="{{ $block['classes'] }}">
-  <div class="col">
+  <div class="col mb-8">
     <figure>
       <img src="{{$col_1['image']['url']}}" alt="{{$col_1['image']['alt']}}">
-      <figcaption>{{_e($col_1['contenu'])}}</figcaption>
+      <figcaption class="mt-2">{{_e($col_1['contenu'])}}</figcaption class="mt-2">
     </figure>
   </div>
-  <div class="col">
+  <div class="col mb-8">
     <figure>
       <img src="{{$col_2['image']['url']}}" alt="{{$col_2['image']['alt']}}">
-      <figcaption>{{_e($col_2['contenu'])}}</figcaption>
+      <figcaption class="mt-2">{{_e($col_2['contenu'])}}</figcaption class="mt-2">
     </figure>
   </div>
-  <div class="col">
+  <div class="col mb-8">
     <figure>
       <img src="{{$col_3['image']['url']}}" alt="{{$col_3['image']['alt']}}">
-      <figcaption>{{_e($col_3['contenu'])}}</figcaption>
+      <figcaption class="mt-2">{{_e($col_3['contenu'])}}</figcaption class="mt-2">
     </figure>
   </div>
 </section>
