@@ -9,10 +9,7 @@ body.single-post {
 
   article {
     header {
-      color: $grey-dark;
-      text-align: center;
-      padding: $spacer*2 $spacer;
-      border-radius: 5px;
+      @apply text-dark text-center p-4 rounded;
 
       h1 {
         @include Montserrat;
@@ -20,7 +17,6 @@ body.single-post {
         text-transform: uppercase;
         margin-top: 0;
         font-weight: 800;
-        text-shadow: 0 0 10px rgba($grey-dark, 0.6);
         font-size: 40px;
         margin-bottom: $spacer;
       }
@@ -35,9 +31,11 @@ body.single-post {
   }
 
   .entry-content {
+    @apply mb-12;
     background: $grey-light;
     border-radius: 5px;
     padding: $spacer*4 $spacer*4;
+    overflow: hidden;
 
     figure.thumbnail {
       display: block;
@@ -55,7 +53,11 @@ body.single-post {
     }
 
     h2 {
-      text-transform: uppercase;
+      @apply my-4;
+    }
+
+    h3 {
+      @apply text-2xl font-semibold mb-4 #{!important};
     }
   }
 }
