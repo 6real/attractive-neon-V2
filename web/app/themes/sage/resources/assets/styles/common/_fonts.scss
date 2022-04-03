@@ -13,6 +13,15 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-primary;
 }
 
+h1 {
+  @apply text-4xl font-bold #{!important};
+}
+
+h2 {
+  @apply text-3xl font-semibold #{!important};
+}
+
+
 //Style Gut
 .is-style-main {
   @apply font-primary font-black text-4xl mb-2 uppercase;
@@ -34,7 +43,7 @@ a {
 
 p,
 .p {
-  @apply font-secondary font-normal text-base text-black;
+  @apply font-secondary font-normal text-base;
 }
 
 a {
