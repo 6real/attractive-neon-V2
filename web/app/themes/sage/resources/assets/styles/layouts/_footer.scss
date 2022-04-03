@@ -1,5 +1,5 @@
 footer {
-  @apply bg-dark mt-4 px-6 py-12 md:py-8;
+  @apply bg-light mt-4 px-6 py-12 md:py-8;
 
   .container {
     @apply relative flex flex-wrap justify-between;
@@ -66,7 +66,7 @@ footer {
           @apply mb-4;
 
           a {
-            @apply text-sm border-b border-primary no-underline text-white hover:text-primary;
+            @apply text-sm border-b border-primary no-underline text-dark hover:text-primary;
           }
         }
       }
