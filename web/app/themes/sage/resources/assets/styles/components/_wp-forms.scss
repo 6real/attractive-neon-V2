@@ -91,6 +91,14 @@
         }
       }
 
+      [type="radio"] {
+        -webkit-appearance: radio;
+      }
+
+      [type="checkbox"] {
+        -webkit-appearance: checkbox;
+      }
+
       .wpforms-field-textarea {
         @include breakpoint(medium) {
           width: 100%;
