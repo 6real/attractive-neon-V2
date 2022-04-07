@@ -16,6 +16,14 @@
 
   }
 
+  .attachment-woocommerce_thumbnail{
+    width: 100% !important;
+  }
+
+  a.remove{
+    @apply text-primary hover:bg-primary #{!important};
+  }
+
   .woocommerce-checkout #payment {
     background: transparent;
   }
