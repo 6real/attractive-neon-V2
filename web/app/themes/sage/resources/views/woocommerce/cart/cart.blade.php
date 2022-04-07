@@ -49,6 +49,20 @@
 
                   $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
 
+                  $remove_item_link = apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                            'woocommerce_cart_item_remove_link',
+                                            sprintf(
+                                              '<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+                                              esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+                                              esc_html__( 'Remove this item', 'woocommerce' ),
+                                              esc_attr( $product_id ),
+                                              esc_attr( $_product->get_sku() )
+                                            ),
+                                            $cart_item_key
+                  );
+
+
+
 
                    $product_quantity = woocommerce_quantity_input(
                         array(
@@ -66,7 +80,8 @@
           <li class="flex py-6 sm:py-10">
 
             <div class="flex-shrink-0 w-40 h-40 ">
-              <a class="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48" href="{!! $product_permalink!!}"> {!! $thumbnail!!}
+              <a class="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48"
+                 href="{!! $product_permalink!!}"> {!! $thumbnail!!}
               </a>
             </div>
 
@@ -90,16 +105,7 @@
                   {!! apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item) !!}
 
                   <div class="absolute top-0 right-0">
-                    <button type="button" class="-m-2 p-2 inline-flex text-gray-400 hover:text-gray-500 product-remove">
-                      <span class="sr-only">Remove</span>
-                      <!-- Heroicon name: solid/x -->
-                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                           aria-hidden="true">
-                        <path fill-rule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              clip-rule="evenodd"/>
-                      </svg>
-                    </button>
+                    {!! $remove_item_link !!}
                   </div>
                 </div>
               </div>
@@ -126,36 +132,40 @@
           @endphp
         </ul>
 
-         <div class="flex gap-4 items-end	">
-            <div class="coupon">
-              <label for="coupon_code"
-                     class="block text-sm font-medium text-gray-700"><?php esc_html_e('Coupon:', 'woocommerce'); ?></label>
-              <div class="mt-1">
-                <input type="text" name="coupon_code" id="coupon_code"
-                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                       placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>">
-              </div>
+        <div class="flex flex-col lg:flex-row gap-4 items-end">
+          <div class="coupon w-full">
+            <label for="coupon_code"
+                   class="block text-sm font-medium text-gray-700"><?php esc_html_e('Coupon:', 'woocommerce'); ?></label>
+            <div class="mt-1">
+              <input type="text" name="coupon_code" id="coupon_code"
+                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                     placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>">
             </div>
-
-            <button type="submit" class="h-12 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover" name="apply_coupon"
-                    value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>">
-
-              <?php esc_attr_e('Apply coupon', 'woocommerce'); ?>
-            </button>
-
-
-            @php do_action('woocommerce_cart_coupon'); @endphp
-
-            <button type="submit" class="h-12 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover" name="update_cart"
-                    value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>">
-              <?php esc_html_e('Update cart', 'woocommerce'); ?>
-            </button>
           </div>
 
+          <button type="submit"
+                  class="w-full lg:w-64 lg:w-auto h-12 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover"
+                  name="apply_coupon"
+                  value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>">
 
-          <?php do_action('woocommerce_cart_actions'); ?>
+            <?php esc_attr_e('Apply coupon', 'woocommerce'); ?>
+          </button>
 
-          <?php wp_nonce_field('woocommerce-cart', 'woocommerce-cart-nonce'); ?>
+
+          @php do_action('woocommerce_cart_coupon'); @endphp
+
+          <button type="submit"
+                  class="w-full lg:w-64 h-12 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover"
+                  name="update_cart"
+                  value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>">
+            <?php esc_html_e('Update cart', 'woocommerce'); ?>
+          </button>
+        </div>
+
+
+        <?php do_action('woocommerce_cart_actions'); ?>
+
+        <?php wp_nonce_field('woocommerce-cart', 'woocommerce-cart-nonce'); ?>
 
       </section>
 
