@@ -156,7 +156,7 @@ class Form extends Controller
 
             $Add2Cart = WC()->cart->add_to_cart($postID, 1, $postID + 2);
 
-            $url = WP_ENV === 'development' ? 'https://localhost:3000/cart' : wc_get_cart_url();
+            $url = WP_ENV === 'development' ? 'https://localhost:3000/panier' : wc_get_cart_url();
 
             if ($Add2Cart != false) {
                 wp_send_json_success(

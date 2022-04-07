@@ -66,8 +66,8 @@
           <li class="flex py-6 sm:py-10">
 
             <div class="flex-shrink-0 w-40 h-40 ">
-              <a class="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48"
-                 href="  {!! $product_permalink!!}"> {!! $thumbnail!!}</a>
+              <a class="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48" href="{!! $product_permalink!!}"> {!! $thumbnail!!}
+              </a>
             </div>
 
             <div class="ml-4 flex-1 flex flex-col justify-between sm:ml-6">
