@@ -13,6 +13,8 @@ export default class extends module {
     // this.$form = this.el.querySelector('form')
     this.$close = this.el.querySelector('.newsletter-content--close');
     this.$open_container = document.querySelectorAll('#newsletter_open');
+    console.log('init newsletter')
+
   }
 
   init() {
