@@ -15,6 +15,7 @@ module.exports = {
     safelist: ['w-40', 'h-40', 'bottom-0', 'fixed', 'lg:w-auto'],
     content: [
       './resources/views/**/*.php',
+      './resources/views/blocks/**/*.php',
       './resources/views/*.php',
       './resources/views/**/*.php',
       './resources/views/woocommerce/*.php',
